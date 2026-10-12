@@ -451,6 +451,122 @@ details.how summary{cursor:pointer;color:var(--muted);font-size:15px;min-height:
   .info-open .toast{bottom:calc(18px + env(safe-area-inset-bottom,0px))}
   .start-copy{padding-top:6vh}
 }
+
+/* ===== v2: from Earth to space ===== */
+.e2s{display:grid;gap:14px}
+.dests2 .dcard{min-height:250px}
+.dests2 .dcard .t{font-size:26px}
+@media (max-width:900px){.dests2 .dcard{min-height:200px}}
+.dcard.fallback-obs{background-image:radial-gradient(circle at 50% 46%,#2e7461 0,#14407f 22%,#0c2452 30%,transparent 31%),radial-gradient(circle at 30% 30%,#1a2050,#05060f 70%)}
+.dcard.sky-bg{background-image:radial-gradient(circle at 74% 26%,#f1ecdc 0,#f1ecdc 4%,transparent 4.5%),radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 40% 18%,#fff,transparent),radial-gradient(1px 1px at 60% 40%,#fff,transparent),radial-gradient(1.5px 1.5px at 84% 52%,#fff,transparent),radial-gradient(1px 1px at 12% 58%,#fff,transparent),radial-gradient(2px 2px at 52% 62%,#ffe6a8,transparent),linear-gradient(to top,#2a1f4a 0,#121c4a 35%,#070a20 80%)}
+.dcard.live-bg{background-image:radial-gradient(ellipse 60% 22% at 50% 44%,transparent 62%,rgba(98,208,255,.55) 63%,transparent 66%),radial-gradient(circle at 50% 44%,#2e7461 0,#14407f 16%,#0c2452 21%,transparent 22%),radial-gradient(circle at 70% 30%,#14204a,#05060f 70%)}
+@media (min-width:981px){.gcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.lbl.home-lbl{border-color:rgba(255,198,92,.6);color:#ffe2a6}
+.bandrow{display:flex;flex-wrap:wrap;gap:6px}
+.bchip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;border:1px solid var(--line);font-size:14px;background:rgba(255,255,255,.04)}
+.bchip i{width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.lightrow{display:grid;gap:6px}
+.why{display:grid;gap:2px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.035);border-inline-start:3px solid rgba(98,208,255,.55)}
+.why b{font-size:14px;color:var(--cyan)}
+.why.hl{border-inline-start-color:var(--gold)}.why.hl b{color:var(--gold)}
+.why.g-yes{border-inline-start-color:var(--ok)}.why.g-part{border-inline-start-color:var(--gold)}.why.g-no{border-inline-start-color:var(--bad)}
+.row.links{display:flex;flex-wrap:wrap;gap:8px}
+a.ctl.ext{text-decoration:none;color:#e2f7ff;border-color:rgba(98,208,255,.4)}
+a.ctl.ext svg,.camlink svg{width:16px;height:16px;flex:none}
+.specbar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;padding:6px;border-radius:20px;background:linear-gradient(90deg,rgba(255,138,92,.16),rgba(255,184,77,.14),rgba(255,93,115,.14),rgba(255,226,122,.16),rgba(177,140,255,.16),rgba(98,208,255,.16),rgba(159,255,214,.14))}
+[dir=rtl] .specbar{background:linear-gradient(-90deg,rgba(255,138,92,.16),rgba(255,184,77,.14),rgba(255,93,115,.14),rgba(255,226,122,.16),rgba(177,140,255,.16),rgba(98,208,255,.16),rgba(159,255,214,.14))}
+.specbar button{display:grid;justify-items:center;gap:4px;min-height:64px;padding:8px 4px;border-radius:14px;border:1px solid transparent;background:rgba(4,5,13,.45);cursor:pointer;font-size:13px;line-height:1.25;text-align:center}
+.specbar button i{width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
+.specbar button[aria-pressed=true]{border-color:var(--c);background:rgba(4,5,13,.8)}
+@media (max-width:640px){.specbar{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.specout{display:grid;gap:10px}
+.specout h4{font-size:22px}
+.gi2{font-weight:700}
+/* sky */
+.skyctl{gap:10px}
+.skyctl .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.sel{min-height:44px;border-radius:12px;background:#080b1f;color:var(--text);border:1px solid var(--line-strong);font:inherit;font-size:16px;padding:0 10px;min-width:170px}
+.skyctl input[type=range]{width:100%;accent-color:var(--cyan);min-height:32px}
+.tlabel{font-weight:700;color:#e2f7ff;margin-inline-start:auto}
+.skygrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.skygrid{grid-template-columns:1fr}}
+.skyside{display:grid;gap:16px}
+.skyside .card.mini2{gap:8px}
+.chartcard{gap:10px}
+.skychart svg{width:100%;height:auto;display:block;max-width:560px;margin-inline:auto}
+.sky-svg .card-lbl{fill:#cfd5ff;font:700 15px var(--f-ar);}
+html[lang=en] .sky-svg .card-lbl{font-family:var(--f-en)}
+.sky-svg .star-lbl{fill:#cdd6ff;font:500 11px var(--f-ar)}
+html[lang=en] .sky-svg .star-lbl{font-family:var(--f-en)}
+.sky-svg .pl-lbl{fill:#fff;font:700 12.5px var(--f-ar);paint-order:stroke;stroke:#04050d;stroke-width:3px}
+html[lang=en] .sky-svg .pl-lbl{font-family:var(--f-en)}
+.sky-svg .pl{cursor:pointer;outline:none}
+.sky-svg .pl:focus-visible circle:first-child{stroke:#62d0ff;stroke-width:2}
+.skydet{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;min-height:28px;font-size:15px}
+.skydet b{color:var(--cyan)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:15px}
+.kv span{color:var(--muted)}
+.mrow{display:flex;align-items:center;gap:14px}
+.moonic{width:56px;height:56px;flex:none}
+.mq .moonic{width:18px;height:18px}
+.plan{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.plan li{display:grid;gap:2px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.035);font-size:15px}
+.plan li.off{opacity:.72}
+.pbody{display:inline-flex;align-items:center;gap:8px;justify-self:start;min-height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);cursor:pointer}
+.pbody i{width:11px;height:11px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.pbody[aria-pressed=true]{border-color:var(--cyan);background:rgba(98,208,255,.14)}
+.tip{font-size:15px;padding:10px 12px;border-radius:14px;background:rgba(255,198,92,.08);color:#ffe7b8}
+.evlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+.ev{display:grid;gap:6px;align-content:start;padding:14px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.ev.big{grid-column:1/-1;background:linear-gradient(150deg,rgba(255,198,92,.10),rgba(14,18,42,.6));border-color:rgba(255,198,92,.35)}
+.evh{display:flex;gap:10px;align-items:flex-start}
+.evh small{display:block;color:var(--muted);font-size:14px}
+.evk{width:14px;height:14px;border-radius:50%;margin-top:6px;flex:none;background:#62d0ff;box-shadow:0 0 10px #62d0ff}
+.evk.ev-solar{background:#ffc65c;box-shadow:0 0 12px #ffc65c}.evk.ev-lunar{background:#ff9b8a;box-shadow:0 0 10px #ff9b8a}
+.mq{display:flex;align-items:center;gap:8px;font-size:14px}
+.mq.moonGood{color:#c9f7e2}.mq.moonFair{color:#ffe7b8}.mq.moonBad{color:#ffd9e0}
+.warn{padding:10px 12px;border-radius:14px;background:rgba(255,143,163,.1);color:#ffd9e0;font-weight:600}
+/* live */
+.mapwrap{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0c2452}
+.issmap{display:block;width:100%;height:auto;aspect-ratio:2/1}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:22px;height:0;border-top:3px solid #62d0ff}
+.legend .lg-next{border-top:3px dashed #fff}
+.legend .lg-home{width:12px;height:12px;border:0;border-radius:50%;background:#ffc65c}
+.issstats{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:560px){.issstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.camlist{display:grid;gap:8px}
+.camlink{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;padding:8px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.035);color:#e2f7ff;text-decoration:none;font-size:15px}
+.camlink:hover{border-color:var(--cyan)}
+.apod-img{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000}
+.apod-img img{display:block;width:100%;max-height:420px;object-fit:cover}
+.apod h4{font-family:var(--f-en);font-size:19px}
+.apod-x summary{cursor:pointer;color:var(--cyan);font-weight:600;min-height:40px;display:flex;align-items:center}
+.apod-x p{font-family:var(--f-en);font-size:15px;line-height:1.6;color:#d8dcf5;text-align:left}
+.tl{margin:0;padding-inline-start:20px;display:grid;gap:10px}
+.card.sa{background:linear-gradient(160deg,rgba(95,224,168,.07),rgba(14,18,42,.8));border-color:rgba(95,224,168,.25)}
+/* scale */
+.scale-form{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.scale-form label{display:grid;gap:6px;font-size:14px;color:var(--muted);flex:1 1 180px}
+.scale-form input{min-height:52px;border-radius:14px;border:1px solid var(--line-strong);background:#080b1f;color:var(--text);font:inherit;font-size:20px;padding:0 14px;width:100%}
+.scale-out{display:grid;gap:6px}
+.sc-head,.sc-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.5fr) minmax(0,.9fr);gap:10px;align-items:center}
+.sc-head{font-size:13px;color:var(--muted);padding-inline:12px}
+.sc-row{padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.035)}
+.sc-row.earth{background:rgba(98,208,255,.10)}
+.sc-row .nm{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:600}
+.sc-row .nm i{width:11px;height:11px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.sc-row .nm small{color:var(--muted);font-weight:500}
+.sc-row .val{display:grid;gap:4px}
+.sc-row .bar{display:block;height:6px;border-radius:9px;background:rgba(255,255,255,.07);overflow:hidden}
+.sc-row .bar i{display:block;height:100%;border-radius:9px}
+.sc-row .age small{color:var(--muted);font-size:12.5px}
+@media (max-width:520px){.sc-head,.sc-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.sc-head span:last-child,.sc-row .age{grid-column:1/-1}.sc-head{display:none}}
+.sc-row .k{display:none}
+@media (max-width:520px){.sc-row .k{display:inline}}
+.scale-th{display:grid;place-items:center;color:var(--gold);background:radial-gradient(circle at 50% 40%,rgba(255,198,92,.22),#0a0d22 70%)}
+.scale-th svg{width:40px;height:40px}
 </style>
 
 <div class="sky"></div>
@@ -481,7 +597,7 @@ details.how summary{cursor:pointer;color:var(--muted);font-size:15px;min-height:
       <span class="eyebrow"><i aria-hidden="true"></i><span data-i18n="eyebrow"></span></span>
       <h1 data-i18n="app"></h1>
       <p class="tagline" data-i18n="tagline"></p>
-      <div class="teaser"><div class="tz"><b>8</b><span data-i18n="tzPlanets"></span></div><div class="tz"><b>5</b><span data-i18n="tzStars"></span></div><div class="tz"><b>4</b><span data-i18n="tzGal"></span></div></div>
+      <div class="teaser"><div class="tz"><b>8</b><span data-i18n="tzPlanets"></span></div><div class="tz"><b>5</b><span data-i18n="tzStars"></span></div><div class="tz"><b>4</b><span data-i18n="tzGal"></span></div><div class="tz"><b>12</b><span data-i18n="tzObs"></span></div></div>
       <form class="field launch" id="name-form" novalidate>
         <label for="name-input" data-i18n="nameLabel"></label>
         <input id="name-input" name="name" type="text" maxlength="20" autocomplete="off" data-i18n-ph="namePh">
@@ -501,6 +617,14 @@ details.how summary{cursor:pointer;color:var(--muted);font-size:15px;min-height:
       <button class="dcard fallback-stars" type="button" data-go="stars" id="card-stars"><span class="t" data-i18n="stars"></span><span class="d" data-i18n="starsLine"></span><span class="pill" aria-hidden="true"><span data-icon="arrow" class="flip"></span></span></button>
       <button class="dcard fallback-galaxies" type="button" data-go="galaxies" id="card-galaxies"><span class="t" data-i18n="galaxies"></span><span class="d" data-i18n="galLine"></span><span class="pill" aria-hidden="true"><span data-icon="arrow" class="flip"></span></span></button>
     </div>
+    <section class="e2s">
+      <div class="sec-row"><span class="gi" aria-hidden="true"><span data-icon="scope"></span></span><h2 class="sec-title" data-i18n="earthSpace"></h2></div>
+      <div class="dests dests2">
+        <button class="dcard fallback-obs" type="button" data-go="observatories" id="card-obs"><span class="t" data-i18n="observatories"></span><span class="d" data-i18n="obsLine"></span><span class="pill" aria-hidden="true"><span data-icon="arrow" class="flip"></span></span></button>
+        <button class="dcard sky-bg" type="button" data-go="sky" id="card-sky"><span class="t" data-i18n="sky"></span><span class="d" data-i18n="skyLine"></span><span class="pill" aria-hidden="true"><span data-icon="arrow" class="flip"></span></span></button>
+        <button class="dcard live-bg" type="button" data-go="live" id="card-live"><span class="t" data-i18n="live"></span><span class="d" data-i18n="liveLine"></span><span class="pill" aria-hidden="true"><span data-icon="arrow" class="flip"></span></span></button>
+      </div>
+    </section>
     <section class="dyk" id="dyk">
       <div class="dyk-ic" aria-hidden="true"><span data-icon="bulb"></span></div>
       <div class="body"><span class="label" data-i18n="dyk"></span><p id="dyk-text"></p><span class="dyk-src" id="dyk-src"></span></div>
@@ -512,6 +636,7 @@ details.how summary{cursor:pointer;color:var(--muted);font-size:15px;min-height:
         <button class="mini gcard" type="button" data-go="game" data-mode="planet"><span class="thumb" id="thumb-game"></span><span><span class="t" data-i18n="gameTitle"></span><span class="d" data-i18n="gameLine"></span></span><span class="go flip" data-icon="arrow"></span></button>
         <button class="mini gcard" type="button" data-go="game" data-mode="star"><span class="thumb" id="thumb-star"></span><span><span class="t" data-i18n="starGameTitle"></span><span class="d" data-i18n="starGameLine"></span></span><span class="go flip" data-icon="arrow"></span></button>
         <button class="mini gcard" type="button" data-go="order"><span class="thumb order-th" id="thumb-order"></span><span><span class="t" data-i18n="orderTitle"></span><span class="d" data-i18n="orderLine"></span></span><span class="go flip" data-icon="arrow"></span></button>
+        <button class="mini gcard" type="button" data-go="scale"><span class="thumb scale-th" aria-hidden="true"><span data-icon="scale"></span></span><span><span class="t" data-i18n="scaleTitle"></span><span class="d" data-i18n="scaleLine"></span></span><span class="go flip" data-icon="arrow"></span></button>
       </div>
     </section>
     <div class="minis" style="grid-template-columns:1fr">
@@ -538,6 +663,10 @@ details.how summary{cursor:pointer;color:var(--muted);font-size:15px;min-height:
   <section class="explore" id="scr-planets" hidden></section>
   <section class="explore" id="scr-stars" hidden></section>
   <section class="explore" id="scr-galaxies" hidden></section>
+  <section class="explore" id="scr-observatories" hidden></section>
+  <section class="explore v2" id="scr-sky" hidden></section>
+  <section class="explore v2" id="scr-live" hidden></section>
+  <section class="explore v2" id="scr-scale" hidden></section>
 
   <!-- game -->
   <section class="game" id="scr-game" hidden></section>
@@ -592,6 +721,14 @@ const ICONS={
   motion:'<path d="M3 12h4l3-6 4 12 3-6h4"/>', pass:'<rect x="5" y="3" width="14" height="18" rx="2.5"/><circle cx="12" cy="10" r="3"/><path d="M9 16.5h6"/>',
   download:'<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>', check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>', more:'<path d="M6 9l6 6 6-6"/>'
 };
+Object.assign(ICONS,{
+  scope:'<path d="M4 15l9-5 2 3.5-9 5z"/><path d="M13 10l5-2.8 2 3.5-5 2.8"/><path d="M9 18l-2 3M11 17l2 4"/>',
+  sat:'<rect x="9" y="9" width="6" height="6" rx="1"/><path d="M3 5l4 4M17 15l4 4M2 9l5-5M17 20l5-5"/><path d="M15 9l2-2"/>',
+  moon:'<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+  ext:'<path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
+  pin:'<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
+  scale:'<path d="M12 4v16M5 20h14"/><path d="M5 8h14"/><path d="M5 8l-3 6h6zM19 8l-3 6h6z"/>',
+});
 const icon=(n)=>{ const s=document.createElementNS('http://www.w3.org/2000/svg','svg'); s.setAttribute('viewBox','0 0 24 24'); s.setAttribute('class','i'); s.setAttribute('aria-hidden','true'); s.innerHTML=ICONS[n]; return s; };
 
 /* ================= LANGUAGE ================= */
@@ -1139,7 +1276,7 @@ class Stage{
     this.renderer.render(this.scene,this.camera);
     if(this.labels.classList.contains('off')) return;
     for(const it of this.items){ this.v.setFromMatrixPosition(it.obj.matrixWorld).project(this.camera);
-      if(this.v.z>1||Math.abs(this.v.x)>1.1||Math.abs(this.v.y)>1.1){ it.el.style.visibility='hidden'; continue; }
+      if(it.hide||this.v.z>1||Math.abs(this.v.x)>1.1||Math.abs(this.v.y)>1.1){ it.el.style.visibility='hidden'; continue; }
       it.el.style.visibility='visible'; it.el.style.transform=`translate(${(this.v.x*.5+.5)*this.w}px,${(-this.v.y*.5+.5)*this.h}px) translate(-50%,calc(-100% - 6px))`; }
   }
 }
@@ -1351,7 +1488,7 @@ function applySnapshots(){
   const set=(sel,url)=>{ const e=$(sel); if(url&&e){ e.style.backgroundImage=`url(${url})`; e.classList.remove('fallback-planets','fallback-stars','fallback-galaxies'); } };
   setTimeout(()=>{ set('#card-planets',Snap.shot('c-planets',720,520,snapEarth));
     setTimeout(()=>{ set('#card-stars',Snap.shot('c-stars-'+lang,720,520,snapStars));
-      setTimeout(()=>{ set('#card-galaxies',Snap.shot('c-gal',720,520,snapGalaxy)); set('#thumb-game',Snap.shot('c-game',200,200,snapPlanet('saturn'))); set('#thumb-star',Snap.shot('c-star',200,200,(st)=>{ buildStarBody(st,'rigel'); return {pos:[0,0,5.4]}; })); },30); },30); },30);
+      setTimeout(()=>{ set('#card-galaxies',Snap.shot('c-gal',720,520,snapGalaxy)); setTimeout(()=>{ const u=Snap.shot('c-obs',720,440,snapGlobe); const c=$('#card-obs'); if(u&&c){ c.style.backgroundImage=`url(${u})`; c.classList.remove('fallback-obs'); } },60); set('#thumb-game',Snap.shot('c-game',200,200,snapPlanet('saturn'))); set('#thumb-star',Snap.shot('c-star',200,200,(st)=>{ buildStarBody(st,'rigel'); return {pos:[0,0,5.4]}; })); },30); },30); },30);
 }
 
 /* ================= SCREENS ================= */
@@ -1364,7 +1501,8 @@ function go(name){
   if(EXPLORE.includes(current)&&mainStage) mainStage.stop();
   document.body.classList.remove('info-open');
   clearInterval(ordTimer); closeSettings();
-  ['start','hub','planets','stars','galaxies','game','order','passport'].forEach(s=>{ $('#scr-'+s).hidden=s!==name; });
+  if(current==='live'&&name!=='live') stopLive(); if(current==='sky') clearInterval(sky.timer);
+  ['start','hub','planets','stars','galaxies','observatories','sky','live','scale','game','order','passport'].forEach(s=>{ $('#scr-'+s).hidden=s!==name; });
   $('#top').hidden=name==='start';
   current=name; window.scrollTo(0,0);
   const hb=$('#home-btn'); if(name==='hub') hb.setAttribute('aria-current','page'); else hb.removeAttribute('aria-current');
@@ -1377,6 +1515,9 @@ function render(entering){
   if(current==='game') renderGame(entering);
   if(current==='order') renderOrder(entering);
   if(current==='passport') renderPassport();
+  if(current==='sky') renderSky(entering);
+  if(current==='live') renderLive(entering);
+  if(current==='scale') renderScale();
 }
 document.addEventListener('click',e=>{ const g=e.target.closest('[data-go]'); if(g){ e.preventDefault(); if(g.dataset.mode){ gameMode=g.dataset.mode; resetGame(); } go(g.dataset.go); } });
 
@@ -1469,7 +1610,7 @@ function prewarm(){ if(warmed||!HAS3D) return; warmed=true; const ids=['sun','me
 $('#toggle-missions').addEventListener('click',()=>{ missionsOpen=!missionsOpen; renderHub(); });
 $('#clear-btn').addEventListener('click',()=>{ $('#clear-confirm').hidden=false; });
 $('#clear-no').addEventListener('click',()=>{ $('#clear-confirm').hidden=true; });
-function resetAll(){ Voice.stop(); const keep={lang,calm,voice:state.voice,rate:state.rate,autoVoice:state.autoVoice}; state=Object.assign(blank(),keep); save(); $('#name-input').value=''; resetGame(); panel.planets=panel.stars=panel.galaxies=null; go('start'); toast(t('cleared')); }
+function resetAll(){ Voice.stop(); const keep={lang,calm,voice:state.voice,rate:state.rate,autoVoice:state.autoVoice}; state=Object.assign(blank(),keep); save(); $('#name-input').value=''; resetGame(); panel.planets=panel.stars=panel.galaxies=panel.observatories=null; go('start'); toast(t('cleared')); }
 $('#clear-yes').addEventListener('click',resetAll);
 
 /* ---- explore template ---- */
@@ -1489,7 +1630,7 @@ function enterExplore(kind,entering,rebuild){
   const prevStage=sec.querySelector('.stage');
   sec.replaceChildren();
   const strip=el('div',{class:'strip ex-strip',role:'group','aria-label':t(cfg.title)});
-  cfg.list().forEach(o=>{ const id=o.id, seenId=kind==='planets'?id:(kind==='stars'?(id==='sun'?'sun':'star-'+id):'gal-'+id);
+  cfg.list().forEach(o=>{ const id=o.id, seenId=seenOf(kind,id);
     const c=el('button',{class:'chip',type:'button',style:'--c:'+o.color,'aria-pressed':String(panel[kind]&&panel[kind].id===id)},[el('i'),L(o.name)]);
     if(state.seen.includes(seenId)) c.append(el('span',{class:'seen'},[icon('check')]));
     c.addEventListener('click',()=>openInfo(kind,id)); strip.append(c); });
@@ -1502,6 +1643,7 @@ function enterExplore(kind,entering,rebuild){
   sec.append(head,strip,main,el('p',{class:'stage-note',text:t(cfg.note)}));
   if(kind==='stars') sec.append(starActs());
   if(kind==='galaxies') sec.append(galActs());
+  if(kind==='observatories') sec.append(obsActs());
   if(entering||rebuild||!mainStage||!mainStage.content){
     mount3D(stage,'main',cfg.builder);
     if(!HAS3D) syncDocksHidden(stage);
@@ -1514,7 +1656,7 @@ function focusScene(kind,id){ const c=mainStage&&mainStage.content; if(!c) retur
 function openInfo(kind,id){
   Voice.stop();
   panel[kind]={id,more:false};
-  const seenId=kind==='planets'?id:(kind==='stars'?(id==='sun'?'sun':'star-'+id):'gal-'+id); markSeen(seenId);
+  const seenId=seenOf(kind,id); markSeen(seenId); if(kind==='observatories') obsSeen();
   if(kind==='planets'&&id==='saturn') complete('rings');
   $$('#scr-'+kind+' .ex-strip .chip').forEach((c,i)=>{ const o=EX[kind].list()[i]; if(!o) return; c.setAttribute('aria-pressed',String(o.id===id)); if(o.id===id&&!c.querySelector('.seen')) c.append(el('span',{class:'seen'},[icon('check')])); });
   if(isPhone()&&!isShort()) window.scrollTo(0,0);
@@ -1561,6 +1703,7 @@ function renderInfo(kind){
     more=[ el('p',{class:'note',style:'font-size:15px',text:L(STAR_RULE)}), srcLine(s.src,s.src===SRC.sun?'NASA — Sun Facts':'NASA — Stars') ];
     speak=()=>[L(s.name)+'.',L(s.kind)+'.',L(s.info),t('color')+': '+L(s.colorText)+(lang==='ar'?'، ':', ')+L(s.tempText)+'.',...(P.more?[L(STAR_RULE)]:[])].join(' ');
     info.replaceChildren(head(L(s.kind),L(s.name),closeB), voiceRow('star-'+s.id,speak), ...nodes, ...moreBlock(kind,more));
+  } else if(kind==='observatories'){ renderObsInfo(info,P,closeB);
   } else {
     const g=GAL_BY[P.id];
     nodes=[ statTiles(g.stats), el('p',{class:'lead',text:L(g.typeDesc)}), el('span',{class:'label',text:t('facts')}), el('ul',{class:'facts'},g.facts.map(f=>el('li',{text:L(f)}))) ];
@@ -1686,7 +1829,7 @@ let dykBag=[], dykCur=null;
 function nextDyk(anim){ if(!dykBag.length){ dykBag=DYK.map((_,i)=>i); for(let i=dykBag.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [dykBag[i],dykBag[j]]=[dykBag[j],dykBag[i]]; } if(dykBag[dykBag.length-1]===dykCur) dykBag.reverse(); }
   dykCur=dykBag.pop(); paintDyk(anim); }
 function paintDyk(anim){ const d=DYK[dykCur], body=$('#dyk .body'); if(!d||!body) return;
-  const paint=()=>{ $('#dyk-text').textContent=L(d.f); $('#dyk-src').replaceChildren(el('i',{style:'--c:'+d.c}),L(d.n)+' · ',el('a',{href:d.src,target:'_blank',rel:'noopener',text:'NASA'})); body.classList.remove('out'); };
+  const paint=()=>{ $('#dyk-text').textContent=L(d.f); $('#dyk-src').replaceChildren(el('i',{style:'--c:'+d.c}),L(d.n)+' · ',el('a',{href:d.src,target:'_blank',rel:'noopener',text:d.sn||'NASA'})); body.classList.remove('out'); };
   if(anim&&!calm){ body.classList.add('out'); setTimeout(paint,350); } else paint(); }
 $('#dyk-next').addEventListener('click',()=>{ Voice.stop(); nextDyk(true); });
 setInterval(()=>{ if(current==='hub'&&!calm&&!document.hidden&&!Voice.btn) nextDyk(true); },12000);
@@ -1827,6 +1970,612 @@ document.addEventListener('visibilitychange',()=>{
   if(document.hidden){ mainStage&&mainStage.stop(); heroStage&&heroStage.stop(); Voice.stop(); }
   else { if(EXPLORE.includes(current)&&mainStage&&mainStage.content) mainStage.start(); if((current==='start'||current==='game')&&heroStage&&heroStage.content) heroStage.start(); }
 });
+
+/* ================= V2 — observatories, tonight's sky, live from space, planet scale ================= */
+Object.assign(UI,{
+  earthSpace:['من الأرض إلى الفضاء','From Earth to space'],
+  observatories:['المراصد','Observatories'], obsLine:['أين تقع أكبر عيون البشر على الكون؟','Where are humanity’s biggest eyes on the universe?'],
+  sky:['سماء الليلة','Tonight’s Sky'], skyLine:['ماذا يظهر الليلة فوق مدينتك؟','What is up tonight above your city?'],
+  live:['مباشر من الفضاء','Live from Space'], liveLine:['محطة الفضاء الدولية الآن، وصورة اليوم من ناسا','The space station right now, and NASA’s picture of the day'],
+  tzObs:['مرصدًا وتلسكوبًا','observatories'],
+  scaleTitle:['ميزان الكواكب','Planet Scale'], scaleLine:['وزنك وعمرك على الكواكب الأخرى','Your weight and age on other worlds'],
+  obsHint:['اسحب لتدوير الأرض، واضغط على أي مرصد لعرض معلوماته.','Drag to turn the Earth. Tap any observatory to see its details.'],
+  obsNote:['مواقع المراصد على الكرة الأرضية حقيقية، والعلامة الذهبية هي المدينة المنورة. أحجام التلسكوبات الفضائية ومداراتها في المشهد ليست بمقياس رسم.','Observatory locations on the globe are real; the gold pin is Madinah. Space telescopes and their orbits are not drawn to scale.'],
+  where:['الموقع','Location'], height:['الارتفاع','Altitude'], orbit:['المدار','Orbit'], light:['الضوء الذي يرصده','Light it observes'], size:['الحجم','Size'], since:['منذ','Since'], operator:['الجهة','Operated by'],
+  whyHere:['لماذا هنا؟','Why here?'], whySpace:['لماذا في الفضاء؟','Why in space?'], importance:['أهميته','Why it matters'], highlight:['إنجاز بارز','Highlight'],
+  site:['الموقع الرسمي','Official site'], liveCam:['كاميرا مباشرة','Live webcam'], approxPin:['موقع العلامة على الكرة تقريبي.','The pin position on the globe is approximate.'],
+  tagGround:['مرصد أرضي','Ground observatory'], tagSpace:['تلسكوب فضائي','Space telescope'], tagBuild:['قيد البناء','Under construction'],
+  youHere:['المدينة المنورة','Madinah'],
+  specTitle:['الطيف: أي عين ترى ماذا؟','The spectrum: which eye sees what?'],
+  specLine:['الضوء أنواع كثيرة لا ترى أعيننا منها إلا جزءًا صغيرًا. اختيار نوع يعرض ما يكشفه، وهل يصل إلى سطح الأرض، وأي المراصد ترصده.','Light comes in many kinds, and our eyes see only a small part. Choose one to see what it reveals, whether it reaches the ground, and which observatories detect it.'],
+  reveals:['ماذا يكشف؟','What does it reveal?'], reachGround:['هل يصل إلى سطح الأرض؟','Does it reach the ground?'], whoSees:['مراصد في القائمة ترصده','Observatories in this list that detect it'],
+  noneListed:['لا يوجد في القائمة. مثال: تلسكوب فيرمي الفضائي لأشعة غاما (ناسا، 2008).','None in this list. Example: NASA’s Fermi Gamma-ray Space Telescope (2008).'],
+  highDry:['أين تُبنى المراصد؟','Where are observatories built?'],
+  hd1:['في الأماكن المرتفعة: يبقى معظم الهواء وبخار الماء تحت التلسكوب.','High up: most of the air and water vapour stay below the telescope.'],
+  hd2:['في الصحارى الجافة: بخار الماء يمتص الأشعة تحت الحمراء والموجات المليمترية.','In dry deserts: water vapour absorbs infrared and millimetre waves.'],
+  hd3:['بعيدًا عن المدن: أضواء المدن تغطي النجوم الخافتة (التلوث الضوئي).','Far from cities: city lights drown out faint stars (light pollution).'],
+  hd4:['حيث الهواء مستقر: الهواء المضطرب يجعل النجوم ترتعش في الصور.','Where the air is steady: turbulent air makes stars shimmer in images.'],
+  hd5:['وبعض الضوء لا يصل إلى الأرض أبدًا، فتُرسل تلسكوباته إلى الفضاء.','Some light never reaches the ground at all, so its telescopes go to space.'],
+  /* sky */
+  city:['المدينة','City'], myLoc:['موقعي','My location'], now:['الآن','Now'], tonight9:['الليلة 9 م','Tonight 9 pm'], afterH:['بعد {h} ساعة','In {h} h'],
+  locErr:['تعذّر تحديد الموقع. اختيار مدينة من القائمة يعمل دائمًا.','Location is not available. Choosing a city from the list always works.'],
+  locNote:['يُستخدم الموقع للحساب فقط ولا يُحفظ.','Your location is used for the calculation only and is not saved.'],
+  skyChart:['خريطة السماء','Sky map'], skyHow:['الخريطة كأنك مستلقٍ على ظهرك ورأسك نحو الشمال: الشرق على اليسار والغرب على اليمين. الحافة هي الأفق، والمركز فوق رأسك مباشرة.','Read the map as if lying on your back with your head to the north: east is on the left, west on the right. The edge is the horizon; the centre is straight overhead.'],
+  inSky:['في السماء الآن','In the sky now'], belowH:['تحت الأفق','Below the horizon'],
+  nightPlan:['خطة الليلة','Tonight’s plan'], nightPlanLine:['متى يُرى كل كوكب بالعين المجردة بين الغروب والشروق؟','When can each planet be seen with the naked eye between sunset and sunrise?'],
+  seenFrom:['يُرى من {a} إلى {b}','Visible from {a} to {b}'], best:['أعلى ارتفاع {h}° نحو {d} عند {t}','Highest: {h}° towards the {d} at {t}'],
+  notTonight:['لا يُرى الليلة','Not visible tonight'], nearSun:['قريب جدًا من الشمس في السماء','Too close to the Sun in the sky'],
+  hardMercury:['صعب الرؤية: قريب من الأفق في ضوء الشفق','Hard to spot: low in the twilight glow'],
+  sunTimes:['الشمس','The Sun'], sunrise:['الشروق','Sunrise'], sunset:['الغروب','Sunset'], moonTitle:['القمر','The Moon'], moonrise:['شروق القمر','Moonrise'], moonset:['غروب القمر','Moonset'],
+  illum:['الجزء المضيء','Lit portion'], dayNow:['نهار الآن: النجوم موجودة لكن ضوء الشمس يغطيها.','It is daytime: the stars are still there, but sunlight hides them.'], twilightNow:['شفق: تظهر ألمع الكواكب والنجوم أولًا.','Twilight: the brightest planets and stars appear first.'],
+  fist:['قبضة اليد الممدودة تغطي نحو 10 درجات من السماء. ارتفاع 30° يعني ثلاث قبضات فوق الأفق.','A fist at arm’s length covers about 10 degrees of sky. 30° high means three fists above the horizon.'],
+  altLabel:['الارتفاع','Altitude'], dirLabel:['الاتجاه','Direction'],
+  events:['تقويم السماء','Sky calendar'], eventsLine:['أقرب الأحداث الفلكية، وحال القمر في ليلتها','Upcoming sky events, and how bright the Moon will be that night'],
+  inDays:['بعد {n} يوم','in {n} days'], today:['اليوم','today'], tomorrow:['غدًا','tomorrow'], zhr:['حتى {n} شهابًا في الساعة في سماء مظلمة تمامًا','Up to {n} meteors an hour under a perfectly dark sky'],
+  moonGood:['القمر {p}%: ظروف رصد جيدة','Moon {p}% lit: good viewing'], moonFair:['القمر {p}%: ظروف متوسطة','Moon {p}% lit: fair viewing'], moonBad:['القمر {p}%: ضوء القمر يخفي الشهب الخافتة','Moon {p}% lit: moonlight hides fainter meteors'],
+  cityLight:['في المدينة يظهر عدد أقل بكثير من الشهب والنجوم. الأفضل الابتعاد عن الأضواء مع شخص بالغ.','In a city you will see far fewer meteors and stars. Going somewhere darker, with an adult, helps a lot.'],
+  calcNote:['المواقع محسوبة في المتصفح من عناصر مدارية تقريبية نشرها مختبر الدفع النفاث (JPL) التابع لناسا، والدقة في حدود جزء من الدرجة.','Positions are calculated in your browser from approximate orbital elements published by NASA’s Jet Propulsion Laboratory (JPL); accuracy is a fraction of a degree.'],
+  findPlanet:['سؤال المهمة: أي كوكب يظهر في سماء الليلة؟ الضغط عليه في الخريطة أو في القائمة.','Mission: which planet is up tonight? Tap it on the map or in the list.'],
+  /* live */
+  issTitle:['محطة الفضاء الدولية الآن','The International Space Station now'],
+  issLine:['مختبر يدور حول الأرض ويعيش فيه رواد فضاء. الخريطة تتحدث كل بضع ثوانٍ، والجزء المظلل هو الليل على الأرض الآن.','A laboratory that circles Earth with astronauts living on board. The map updates every few seconds; the shaded part is where it is night on Earth right now.'],
+  lat:['خط العرض','Latitude'], lon:['خط الطول','Longitude'], altKm:['الارتفاع','Altitude'], speed:['السرعة','Speed'], fromCity:['البعد عن المدينة المنورة','Distance from Madinah'],
+  sunlit:['في ضوء الشمس','In sunlight'], shadow:['في ظل الأرض','In Earth’s shadow'], issLoading:['جارٍ الاتصال بخدمة تتبع المحطة…','Connecting to the station tracker…'],
+  issFail:['تعذّر الاتصال بخدمة تتبع المحطة الآن. يمكن متابعتها من مواقع ناسا:','The station tracker cannot be reached right now. You can follow it on NASA’s sites:'],
+  issFacts:['تدور المحطة حول الأرض مرة كل 90 دقيقة تقريبًا، أي نحو 16 مرة في اليوم، بسرعة تقارب 28,000 كم/س.','The station circles Earth about every 90 minutes, about 16 times a day, at roughly 28,000 km/h.'],
+  pastTrack:['المسار منذ فتح الصفحة','Track since this page opened'], nextTrack:['المسار المتوقع خلال 90 دقيقة','Expected track, next 90 minutes'],
+  spot:['متى تمر فوقنا؟ (Spot the Station)','When does it pass overhead? (Spot the Station)'], nasaLive:['بث ناسا المباشر','NASA live'],
+  apodTitle:['صورة اليوم الفلكية من ناسا','NASA Astronomy Picture of the Day'], apodEn:['شرح ناسا باللغة الإنجليزية.','NASA’s explanation is in English.'],
+  apodFail:['تعذّر تحميل صورة اليوم الآن. يمكن مشاهدتها على موقع ناسا:','The picture of the day cannot be loaded right now. You can see it on NASA’s site:'],
+  apodOpen:['فتح الصورة بدقة كاملة','Open the full-size image'], apodVideo:['مشاهدة فيديو اليوم','Watch today’s video'], readMore:['قراءة الشرح','Read the explanation'],
+  camsTitle:['كاميرات المراصد المباشرة','Live observatory webcams'], camsLine:['روابط رسمية لكاميرات تبث من قمم المراصد. الوقت هناك قد يكون نهارًا أو ليلًا.','Official links to cameras on observatory summits. It may be day or night there.'],
+  saTitle:['السعودية في الفضاء','Saudi Arabia in space'],
+  sa1:['17 يونيو 1985: الأمير سلطان بن سلمان على متن المكوك «ديسكفري» في مهمة STS-51G، أول عربي وأول مسلم في الفضاء.','17 June 1985: Prince Sultan bin Salman flew on Space Shuttle Discovery (STS-51G), the first Arab and first Muslim in space.'],
+  sa2:['21 مايو 2023: ريانة برناوي وعلي القرني في مهمة «أكسيوم 2» إلى محطة الفضاء الدولية، وريانة أول رائدة فضاء سعودية.','21 May 2023: Rayyanah Barnawi and Ali AlQarni flew on Axiom Mission 2 to the space station; Rayyanah became the first Saudi woman in space.'],
+  /* scale */
+  scaleIntro:['كتلتك لا تتغير من كوكب إلى آخر، لكن قوة الجذب تتغير، فيتغير ما يقرؤه الميزان. والسنة على كل كوكب هي مدة دورته حول الشمس.','Your mass stays the same everywhere, but gravity changes, so the number on a scale changes. A year on each planet is the time it takes to go around the Sun.'],
+  massIn:['الكتلة على الأرض (كغ)','Mass on Earth (kg)'], ageIn:['العمر بالسنوات الأرضية','Age in Earth years'], calc:['احسب','Calculate'],
+  noSave:['لا يُحفظ أي رقم، والحساب يتم على هذا الجهاز فقط.','Nothing is saved; the calculation happens on this device only.'],
+  scaleRead:['قراءة الميزان','Scale reading'], ageThere:['عمرك هناك','Your age there'], gravityX:['الجاذبية مقارنة بالأرض','Gravity vs Earth'],
+  gasNote:['المشتري وزحل وأورانوس ونبتون بلا سطح صلب؛ قيم الجاذبية لها محسوبة عند مستوى ضغط يساوي ضغط الهواء على سطح الأرض.','Jupiter, Saturn, Uranus and Neptune have no solid surface; their gravity is given at the level where pressure equals Earth’s sea-level air pressure.'],
+  kg:['كغ','kg'], yrs:['سنة','yr'], moonAge:['القمر يدور حول الأرض لا حول الشمس','The Moon orbits Earth, not the Sun'], scaleErr:['أدخل رقمًا بين 1 و300 للكتلة، وبين 1 و120 للعمر.','Enter a mass between 1 and 300 and an age between 1 and 120.'],
+});
+
+
+/* ---------- shared: real world map (Natural Earth 1:110m land, via world-atlas) ---------- */
+const LAND_ENC='-298,-400,-1,-3,-2,-2,-10,1,-11,-1,-7,2,-2,2,11,0,11,-1,3,2,3,2,5,-2;-796,-397,-10,-1,-6,2,-3,1,0,1,-4,1,3,2,10,-1,5,-1,4,-2,1,-2;-226,-390,6,-2,3,-3,0,-3,0,-2,-7,-2,-9,-1,-9,-1,-10,-1,-12,0,-7,2,1,2,11,1,4,2,3,2,2,2,3,2,4,2,2,0,8,1,7,-1;-606,-368,6,0,6,1,-2,-2,-5,-1,-7,0,-5,2,1,1,6,-1;-628,-367,8,-2,-3,0,-7,0,-6,2,3,1,5,-1;-495,-360,6,0,5,0,3,-3,-4,1,-6,0,-6,0,-7,-1,-5,1,-3,3,3,0,7,0,7,-1;-342,-355,0,-2,-1,-2,-1,-2,-6,-1,-5,-1,-7,1,3,2,-6,-1,-6,-1,-4,2,0,2,5,2,4,0,6,0,1,3,0,1,0,4,3,3,5,1,2,-2,2,-2,2,-2,1,-3,2,-2;-900,-424,5,3,9,-1,2,0,1,1,2,0,1,1,0,-1,1,0,7,-2,6,2,2,1,14,1,5,-2,2,0,8,-2,14,-1,11,-2,20,-1,14,2,21,-1,12,-2,14,1,13,2,2,2,-20,0,-16,2,-5,1,-13,2,1,2,2,2,2,2,-1,2,-9,1,-3,2,-8,1,12,0,12,1,7,-2,9,2,8,2,4,1,-2,2,-6,2,-8,1,-10,1,-9,0,-10,1,-3,2,-6,1,-4,2,-2,6,3,-1,4,-2,8,1,8,1,4,-2,8,0,7,1,6,1,6,2,7,1,0,1,-1,2,1,2,6,1,3,-2,8,1,6,2,7,0,7,0,6,1,6,1,6,1,4,0,3,0,8,0,6,0,7,0,7,0,7,0,7,-1,7,1,7,0,8,-1,6,1,6,1,6,1,6,-1,6,1,5,1,4,-1,1,-2,4,-2,5,2,6,-2,6,-1,6,-1,7,0,7,1,7,0,7,-1,7,-1,2,3,-3,1,-2,2,-7,0,-3,2,-1,2,-1,4,3,-1,7,0,6,0,6,-1,5,-1,3,-2,6,0,7,1,7,1,6,0,5,-1,7,0,4,4,4,-2,6,-1,6,1,4,-2,7,-1,6,0,6,-1,4,2,2,1,5,-2,6,1,5,-1,4,-2,7,1,5,1,5,1,6,1,7,0,6,1,5,1,3,2,1,2,0,2,-2,2,-2,2,-1,2,-1,1,-1,2,1,2,2,2,2,2,1,2,-1,2,-1,2,3,3,2,1,4,2,3,2,4,1,2,2,3,2,3,1,5,0,3,2,3,1,5,0,3,1,3,2,4,1,3,-2,-2,-1,-5,-2,-2,-1,-4,1,-4,-1,-3,-1,-4,-1,-3,-1,0,-2,0,-2,2,-2,-3,-1,-5,-1,-2,-1,-3,-2,-4,-2,0,-2,1,-2,3,-1,4,-2,4,-1,2,-2,1,-2,2,-2,2,-2,1,-1,1,-5,2,-2,0,-2,2,-2,-1,-2,-3,-3,-3,-1,-6,-1,-3,-2,-3,-1,-7,-2,-7,-1,-6,-1,-7,-1,-4,-2,-8,0,-9,0,-8,-1,-8,0,1,-2,8,0,6,-2,3,-2,-6,-1,-8,0,-8,-1,0,-2,0,-2,6,-2,1,-1,6,-2,11,-1,9,-1,7,-2,9,-2,12,0,13,-2,8,-1,10,-2,4,-2,3,-2,6,2,8,1,9,2,10,1,9,1,13,0,12,0,10,-1,3,2,7,1,13,0,10,1,9,1,10,1,12,1,7,1,-3,2,-2,2,0,2,-10,0,-10,-1,-10,0,-2,2,1,3,2,1,8,2,8,1,6,1,6,2,5,2,6,1,7,0,4,1,7,0,8,0,6,1,6,2,5,1,7,1,5,2,4,2,2,1,-5,2,1,2,4,1,5,1,5,1,6,2,3,2,3,2,4,2,5,-1,3,-1,6,0,0,1,3,2,5,0,1,-2,6,0,7,1,6,0,6,0,2,-2,5,1,5,1,6,1,6,1,5,1,5,1,5,1,3,2,3,-2,6,1,3,-2,3,-2,6,1,2,2,5,1,7,0,2,-2,4,2,5,0,6,1,5,0,6,-1,5,0,3,-2,3,-1,5,0,6,1,6,0,5,0,5,0,6,1,4,1,5,1,5,1,4,1,3,3,2,1,6,0,2,-2,4,-1,5,0,4,-2,3,-1,5,1,2,2,5,1,5,2,5,1,6,1,3,1,5,1,4,1,4,-1,5,2,3,2,5,-1,4,2,1,1,4,2,4,1,5,1,5,0,4,0,5,-1,4,-1,0,-2,5,-2,3,-1,6,-1,3,-1,4,-2,5,0,4,1,4,2,5,-1,5,-1,5,0,4,-1,5,0,5,-5,-1,-1,0,-2,-5,-2,-4,-2,1,-1,5,0,0,-2,-3,-2,-2,-2,4,-2,5,0,6,1,3,2,2,1,2,2,3,1,2,2,2,3,3,0,6,0,5,1,5,1,3,2,1,2,4,1,4,2,5,1,2,1,3,1,4,1,5,-1,4,1,5,1,6,-1,3,2,3,3,2,-1,2,-3,4,-1,5,0,5,0,5,0,5,0,3,0,4,0,4,-1,4,1,6,0,4,0,6,0,3,1,2,2,4,1,6,4,3,-1,4,-1,4,-2,6,-3,5,0,4,0,6,1,5,1,4,1,4,1,5,1,4,1,4,-1,2,-2,4,-1,6,0,3,-2,6,-1,6,0,5,0,4,2,4,1,4,1,5,-1,5,-1,5,1,4,0,4,0,5,-1,5,1,5,1,5,0,6,0,4,1,5,0,1,2,0,2,3,-1,1,-2,2,-2,2,-2,4,-1,6,1,7,0,4,0,7,0,4,0,7,0,5,-1,4,-1,-1,-2,3,-1,6,-2,5,-1,7,-1,6,-1,6,0,5,0,3,1,5,-1,4,-2,4,-1,6,0,6,-1,2,-2,6,-1,4,-2,5,-1,6,0,6,0,6,0,6,0,5,-1,5,-1,6,-1,3,-1,-1,-2,-2,-2,-2,-2,-2,-2,-3,-2,-6,-1,-3,-2,-7,-1,-2,-2,-3,-2,-4,-1,-2,-2,-1,-2,-1,-2,0,-2,3,-2,1,-2,3,-2,9,-1,2,-2,-9,-1,-8,-1,-9,0,-4,-3,-1,-2,-2,-2,-3,-2,7,-1,2,-2,4,-2,7,-2,6,-2,8,-1,11,-2,3,-2,14,-1,1,-1,4,-1,14,1,11,-1,9,-2,0,-26,-1800,0;-339,-269,7,-3,7,-1,-3,-3,-4,0,-3,2,-1,-3,-5,-1,-5,1,-4,1,-5,1,-6,3,-5,2,-7,6,4,-1,7,-4,6,-1,3,2,2,3,4,2,4,0,2,-3,2,-3;-293,-255,4,-3,-1,-2,-7,-1,-2,2,-4,-2,-3,2,6,3,4,-2,3,3;351,-249,-7,0,0,3,0,2,1,1,3,-2,5,0,0,-1,-2,-3;727,-204,5,-2,3,1,3,1,3,0,1,-6,-2,-2,0,-4,-2,1,-4,-3,-1,0,-3,0,-3,5,-1,3,-2,4,0,2,3,0;865,-205,1,-2,4,2,1,-2,0,-2,-2,-2,-3,-4,-2,-2,1,-2,-3,0,-5,-2,-1,-3,-3,-6,-4,-2,-2,-1,-5,0,-3,2,-6,0,0,2,2,3,7,5,3,1,3,2,5,3,3,2,2,4,2,1,0,3,4,3,1,-3;873,-181,4,-5,0,3,2,-1,1,-4,4,-1,3,-1,3,2,3,0,-2,-5,-1,-3,-4,0,-1,-1,0,-2,-1,-1,-1,-3,-3,-3,-4,-2,-1,1,-2,1,3,4,-2,2,-5,2,0,2,4,2,1,4,-1,3,-2,3,1,1,-3,2,-4,5,-2,3,2,1,3,-3,4,-1,1,-5;836,-111,-2,-1,-3,1,-4,3,-3,2,-3,4,-1,1,2,0,3,-1,2,-2,2,-1,4,-3,3,-3;892,-87,2,-1,-1,-3,-3,0,-3,0,-1,2,2,2,3,-1,1,1;-900,-83,-3,-1,-3,-1,-1,2,2,1,2,0,3,2,1,0,-1,-3;839,-82,-1,-1,-2,2,0,2,3,-3;836,-75,0,-4,-1,1,-1,0,-1,1,0,4,3,-2;250,-68,1,-6,1,-2,0,-3,-1,-1,-2,3,-1,-2,1,-3,0,-2,-2,-2,0,-4,-2,-6,-2,-6,-3,-10,-2,-7,-3,-6,-4,-1,-4,-2,-3,1,-4,2,-1,3,-1,4,-1,4,-1,4,1,3,2,1,0,2,3,4,0,3,-1,2,-1,3,0,5,2,3,0,3,3,0,3,1,1,1,3,0,2,3,5,3,1,3,-1,2,2,-1,3,4,0,3,2,2,2,-2,1,-2,1,-4;718,-69,2,-4,3,2,1,-2,3,-2,-1,-2,1,-4,1,-3,1,-1,2,-4,-1,-2,2,-4,5,-2,4,-3,3,-2,0,-1,2,-3,2,-6,2,1,2,-2,2,1,1,-5,3,-3,2,-2,4,-4,2,-4,0,-3,-1,-3,3,-5,0,-4,-1,-2,-2,-5,0,-3,-1,-3,-2,-5,-3,-2,-2,-4,-2,-3,-1,-4,-2,-2,-2,-4,0,-4,0,-1,-3,-2,-5,0,-5,-2,-2,-2,-3,-2,-5,2,-3,1,1,3,-3,-1,-4,-4,-4,1,-3,1,-3,0,-5,2,-3,3,-1,4,-1,2,-3,2,-4,1,1,2,-1,4,-2,-3,-5,-1,3,2,1,3,1,3,0,4,-4,-5,-3,-1,-2,-4,-4,2,0,2,-3,4,-3,2,1,1,-6,3,-4,0,-4,3,-9,-1,-7,-2,-5,-1,-5,0,-6,-3,-4,-1,-1,-2,-2,-2,-4,-1,-3,0,-5,1,-3,-1,-4,0,-3,-3,-1,1,-2,-2,-3,-1,-4,0,-3,0,-5,3,-3,1,0,3,3,1,1,1,-1,1,1,4,-1,3,-2,5,-1,3,0,3,-2,3,0,1,-2,2,-1,4,-3,4,0,2,2,-2,-2,5,3,-2,1,-1,0,2,-2,4,-1,2,-1,1,1,3,1,1,0,3,0,3,2,3,0,-4,2,4,4,2,3,2,4,1,2,1,1,-1,4,2,3,1,1,1,1,0,3,0,5,2,3,2,1,2,3,3,0,2,1,3,3,4,2,-4,2,1,-1,2,1,2,2,-1,1,4,3,3,1,2,2,0,0,2,3,-1,0,2,2,0,2,1,4,-2,3,-3,3,0,3,-1,-1,3,2,4,3,1,-1,1,2,3,3,2,3,-1,4,1,0,3,-4,2,3,0,3,-1,3,-2,4,-1,1,0,3,-1,3,1,2,0,1,1,3,-3,-2,-2,-1,-2,-2,-1,0,-2,-1,-2,-2,-3,0,-1,4,-3,4,-1,3,-2,4,-3,1,0,3,-1,0,-2,5,-2,3,2,1,3,1,2,1,3,2,4,-1,2,0,2,0,3,0,3,1,1,-1,2,2,3,1,2,0,2,2,2,1,-3,0,-3,2,-1,0,-2,2,-2,0,-3,0,-2;811,-52,1,-2,-3,0,-2,3,3,-1,1,0;604,-51,-3,0,-6,3,5,1,2,-1,2,-2,0,-1;804,-49,-2,0,-3,0,-1,1,1,2,3,-1,1,-1,1,-1;808,-48,0,-1,-4,4,-1,3,2,0,1,-4,2,-2;622,-51,-4,-1,-1,1,1,2,2,3,5,2,0,1,5,1,3,0,2,1,2,-1,-2,-1,-5,-3,-5,-1,-3,-4;589,-40,2,-2,3,1,2,-3,-6,-1,-4,0,-2,0,1,3,3,0,1,2;615,-40,-1,-3,-8,-2,-6,1,0,2,4,1,3,-2,3,1,5,2;799,-42,1,-1,-4,2,-3,2,-2,2,1,0,2,-1,4,-2,1,-2;788,-37,-1,0,-2,1,-3,2,1,1,3,-2,2,-2;543,-34,10,0,1,2,9,-3,2,-3,7,-1,7,-3,-6,-2,-6,2,-4,0,-5,0,-5,1,-6,2,-4,1,-2,-1,-9,2,-1,2,-4,1,3,5,6,-1,4,-2,2,0,1,-2;674,-31,-3,-3,0,3,0,2,1,2,2,-2,0,-2;779,-34,-1,-1,-2,2,-2,3,-1,4,0,1,1,-2,1,-1,3,-3,2,-2,-1,-1;760,-27,-3,-1,0,-1,-3,-1,-3,-2,-2,0,-5,2,-2,1,0,2,4,-1,3,0,1,3,1,0,0,-3,3,1,1,1,3,2,0,3,3,0,1,-1,0,-2,-2,-3;636,-17,-2,-2,-3,1,-1,2,5,0,1,-1;652,-15,2,-4,-4,2,-4,0,-3,0,-3,0,1,3,6,0,5,-1;766,-22,-2,-2,-1,3,-1,2,-2,2,-3,2,-4,1,2,2,2,-2,2,-1,2,-1,2,-2,2,-2,1,-2;671,-6,1,-8,5,-3,4,5,6,3,5,0,4,-1,4,-2,5,-1,9,-3,9,-3,3,-3,3,-2,1,-3,8,-3,1,-3,-4,-1,1,-3,4,-3,4,-6,3,1,-1,-3,4,0,-1,-1,5,-2,-1,-2,-3,0,-1,1,-4,1,-5,0,-4,4,-3,2,-3,5,-6,2,-5,-2,-3,-1,1,-4,-4,-2,-3,1,-5,0,-4,5,-5,1,-2,-2,-6,0,2,4,3,1,-1,6,-2,4,-10,4,-4,1,-8,4,-1,-2,-2,-1,-1,2,0,2,-4,3,5,2,4,0,-1,1,-7,0,-2,3,-4,1,-2,2,6,2,3,1,8,-2,1,-2;626,7,-4,-5,-4,-1,-4,1,-9,0,-4,-1,-1,-4,5,-4,2,2,10,2,-1,-2,-2,0,-2,-3,-4,-2,4,-6,-1,-2,5,-5,0,-4,-3,-1,-2,2,3,4,-5,-2,-2,1,1,2,-4,3,1,5,-3,-2,0,-5,0,-8,-3,0,-2,1,1,5,-1,5,-2,0,-1,3,2,3,1,4,2,8,1,2,4,4,4,-2,7,-1,5,1,5,3,1,-1;643,6,0,-5,-2,1,-1,-3,2,-3,-2,0,-2,3,-1,6,1,4,2,2,0,-3,3,0,0,-2;529,-29,-5,0,-5,4,-6,4,-2,3,-4,4,-2,4,-4,7,-5,4,-1,4,-2,4,-5,3,-2,5,-4,2,-5,6,-1,2,4,0,7,-1,5,-5,4,-3,2,-2,5,-6,5,0,4,-3,3,-4,4,-2,-2,-5,3,-1,2,0,1,-4,1,-3,4,0,3,-3,-2,-7,0,-7;589,9,6,-4,-6,-1,-2,-3,1,-5,-5,-3,0,-5,-2,-8,-1,2,-6,-3,-2,4,-3,0,-3,1,-6,-1,-1,2,-4,0,-4,0,-1,7,-2,1,-3,5,0,4,0,5,3,3,4,-2,4,1,1,4,2,1,6,2,4,3,2,4,2,2,4,2,4,4,3,4,2,0,2,-3,0,-2,4,-1,4,-2,0,-2,-4,0,1,-3,-4,-1,-2,-5,3,-5,-1,-2;632,42,0,-3,1,-3,-2,-5,-2,5,-2,-2,1,-4,-1,-2,-6,3,-1,3,1,3,-3,2,-2,-2,-2,0,-4,-3,0,2,2,4,3,2,2,1,2,-2,4,2,1,2,3,0,0,4,4,-3,1,-2,0,-2;406,31,-4,-1,-3,4,-1,7,3,8,3,-3,3,-3,2,-5,-1,-6,-2,-1;-305,51,-4,-1,-1,0,2,2,0,2,2,0,2,0,-1,-3;620,51,-2,-1,-1,-3,-2,-2,-3,4,1,1,1,1,1,3,2,1,0,-4,3,5,0,-5;593,47,-7,-5,2,3,4,3,3,4,3,5,0,-4,-3,-3,-2,-3;609,59,3,-1,4,0,0,-2,-3,-2,-3,-2,0,3,0,2,-1,2;628,61,1,-6,-4,2,0,-2,1,-3,-2,-1,0,3,-2,0,0,3,2,0,0,2,-3,4,5,0,2,-2;608,65,-2,-4,-2,3,-2,3,4,0,2,-2;607,93,3,-2,1,1,1,-1,-1,-2,2,-4,-2,-4,-3,-1,0,-4,1,-4,2,-1,3,1,6,-3,-1,-3,2,-1,-1,-2,-4,2,-1,3,-2,-2,-3,3,-4,-1,-3,1,0,2,2,2,-2,1,0,-2,-3,3,0,2,-1,5,2,-2,1,8,2,5,3,0;-328,91,-1,-1,-4,0,-3,0,0,2,1,1,4,0,2,-1,1,-1;-385,89,-1,0,-3,0,-3,2,1,1,2,1,1,-1,4,0,2,-1,1,-2,-4,0;-363,99,4,0,1,0,4,0,3,-1,1,0,1,-2,3,1,0,-2,2,0,2,-2,-1,-2,-3,1,-2,0,-2,0,-1,-1,-2,0,0,1,-2,-1,-2,-3,-1,1,-1,1,-3,1,-2,0,-3,0,-3,-1,-2,2,0,1,5,0,4,-1,1,1,-2,3,0,1,-3,1,1,2,3,-1;552,93,-5,-2,-4,2,0,4,3,2,5,2,3,-1,1,-2,-2,-2,-1,-3;-778,95,-2,0,0,2,0,2,1,1,-1,1,1,0,2,-1,1,0,1,-1,1,-1,0,-1,-2,-1,-2,-1;-780,103,-2,0,-1,1,-1,0,0,1,1,0,2,0,1,-1,0,-1;-784,106,0,-1,-3,0,1,1,2,0;-788,107,-1,-1,-2,1,0,1,1,1,0,-1,2,-1;-797,110,0,-1,-2,1,0,1,1,0,1,0,0,-1;-398,114,2,-2,4,1,2,-2,4,-3,3,-2,2,0,3,-1,0,-1,3,-1,4,-2,0,-1,-4,0,-3,-1,-4,1,-7,-1,4,3,-2,1,-4,1,-1,1,-2,3,-2,0,-5,1,-2,1,-6,1,-2,1,2,1,-5,0,-3,-2,-3,0,0,-1,-3,-1,-2,0,3,2,1,2,2,1,3,1,3,0,2,1,4,0,4,0,5,-2;-388,119,-1,0,-1,2,-2,2,1,3,2,0,1,-4,0,-3;606,114,-2,-4,-3,4,0,4,2,5,4,3,3,-1,-1,-3,-3,-8;-389,133,-6,-1,0,2,2,0,4,0,0,-1;-385,133,-1,-4,-1,1,0,3,-2,2,4,-2;673,171,1,-2,-3,-3,-2,2,-3,-2,-1,-2,-3,1,0,2,3,3,2,0,3,2,3,-1;173,178,-4,-2,1,-1,-5,-2,-3,1,-1,2,3,0,1,1,3,0,5,1;119,179,2,-2,4,0,4,0,0,-1,2,1,0,-2,-7,0,-6,1,1,3;78,191,-2,-4,1,-1,-1,-3,-4,2,-3,1,-7,2,1,3,6,-1,5,1,4,0;46,206,3,-3,-1,-7,-2,0,-2,-1,-2,1,0,6,-1,3,3,-1,2,2;705,186,-2,-4,1,-3,-3,-3,-6,-3,-9,0,-7,-6,-3,2,-1,4,-8,-1,-6,-2,-6,-1,5,-3,-3,-9,-4,-2,-2,2,1,5,-3,1,-2,3,5,2,2,3,5,3,4,3,10,2,5,-1,6,9,3,-3,7,5,3,2,3,6,-1,6,3,3,5,1,3,-7,-1,-4,-4,-5,0,-5;48,211,-2,-4,-2,1,-1,3,1,2,3,2,1,-4;720,221,3,-1,4,2,1,-6,-8,-1,-4,-5,-8,3,-3,-5,-5,0,-1,5,3,4,5,0,1,7,2,4,6,-5,4,-2;-318,233,3,-1,5,0,-3,-2,-1,0,-7,2,-1,2,2,1,2,-2;-309,246,-2,-1,-7,2,-5,2,2,1,7,-1,5,-3;-618,243,-2,-1,-8,2,-2,2,-4,2,-1,1,-5,1,-2,3,0,1,5,-1,4,-1,4,-1,2,-1,2,-3,5,-2,2,-2;-281,253,-3,-4,3,2,4,-1,-2,-2,4,-1,3,1,5,-2,-2,-3,4,0,0,-2,2,-3,-2,-5,-3,0,-3,1,1,4,-1,1,-6,-5,-3,1,4,2,-5,1,-6,0,-9,0,-1,1,3,2,-2,2,4,3,5,8,3,2,5,2,2,0,-1,-1,-3,-4;-664,270,5,1,-1,-6,4,-4,-2,0,-3,2,-2,2,-2,2,-1,2,0,2,2,-1;718,254,5,-9,-7,2,-3,-8,5,-5,0,-3,-4,3,-4,-4,0,4,0,5,0,5,1,4,0,7,-3,5,0,7,5,2,-2,2,2,1,2,-3,1,-5,0,-5,2,-5;-34,261,-9,-3,-7,1,4,5,-2,5,6,4,4,3,4,0,6,-3,-3,-4,1,-3,-4,-5;63,278,-3,-4,-5,3,0,2,7,2,1,-3;-765,286,-5,-2,-3,1,0,2,4,2,3,1,3,0,2,-2,-4,-2;-15,293,-5,-5,5,0,5,0,-1,-4,-5,-4,6,0,4,-7,4,-1,3,-5,1,-2,6,-1,0,-4,-3,-1,2,-3,-4,-2,-7,0,-8,-2,-3,1,-3,-2,-5,1,-3,-2,-3,1,7,5,5,1,-8,1,-1,2,5,2,-3,2,1,3,8,0,0,3,-3,3,-6,1,-1,1,1,3,-1,1,-3,-2,0,4,-3,3,2,5,4,4,4,0,6,0;-828,300,-3,-1,-3,1,-3,1,5,1,4,-1,0,-1;-396,311,-2,-3,-2,1,-2,1,2,2,2,0,2,-1;-409,314,-6,-3,-4,0,-1,1,4,3,7,0,0,-1;-859,319,3,-1,4,0,4,-1,5,-1,-1,0,-4,-1,-3,1,-2,1,-5,0,-1,0,0,2;-426,328,1,-2,3,1,3,-1,5,-2,6,-2,0,-2,4,0,3,-1,-4,-2,-8,1,-3,3,-4,-3,-8,-3,-1,3,-7,0,4,2,1,4,2,5,3,-1;-73,332,-1,-3,6,-3,-7,-4,-14,-4,-4,-1,-7,1,-14,2,5,2,-11,2,9,1,0,2,-11,1,4,3,7,1,8,-3,8,2,6,-1,8,3,8,-1;-379,336,-6,-1,-1,3,2,3,5,0,3,-1,0,-2,0,-1,-3,-1;-900,345,12,-4,13,-5,0,-3,3,-1,-1,3,14,0,10,-5,-5,-2,-9,-1,0,-5,-2,-1,-4,0,-4,2,-7,2,-1,2,-5,1,-6,-1,-3,2,2,2,-6,-2,2,-2,-3,-2,-6,-2,-7,0,5,-3,3,-4,2,-1,0,-2,-1,-1,-9,1,-14,-4,-5,-1,-7,-3,-8,-3,-1,-3,-7,4,-14,-4,-2,2,-5,-2,-6,0,-2,-3,-6,-5,0,-2,6,-1,-1,-7,-4,0,-2,-5,2,-2,-9,-2,-2,-6,-7,-1,-2,-5,-7,-5,-2,3,-2,8,-3,11,3,7,4,3,0,2,8,1,9,7,8,5,9,4,4,7,-6,-1,-3,-4,-12,-5,-4,6,-13,-2,-13,-8,4,-3,-11,-2,-8,0,1,4,-8,0,-6,-2,-16,1,-16,-2,-16,-10,-19,-11,8,-1,2,-3,5,-1,3,2,6,0,7,-6,0,-4,-4,-5,0,-6,-3,-8,-7,-7,-2,-3,-7,-6,-6,-6,-4,-3,-6,-3,-3,0,-4,2,-6,-3,-1,-2,-2,0,-2,-1,-2,-2,1,-4,-3,-1,-1,-1,-2,-1,-3,-1,-2,-1,0,-2,-1,-1,2,-1,3,-2,4,-6,1,-3,0,-6,-2,-3,-4,-1,-4,-2,-5,0,0,3,1,3,-2,6,3,0,-3,5,-3,1,0,-1,-2,-1,0,1,-1,1,-1,1,1,2,1,0,0,1,1,3,0,1,-3,0,-3,2,-7,-2,-3,-2,-6,-2,3,3,-1,2,4,3,-3,3,-4,-2,-6,-4,-3,-3,-5,0,-2,-2,2,-4,4,-1,1,-2,4,-1,5,3,5,-2,3,0,1,-2,-7,-2,-3,-2,-5,-3,-2,-3,5,-3,2,-5,3,-5,4,-4,-1,-3,-3,-2,2,-2,2,-2,0,-4,-2,-4,-2,0,-4,-6,-4,-6,-5,-6,-7,-5,-7,-4,-5,-1,-3,-2,-2,2,-3,-3,-7,-2,-5,-1,-2,-5,-3,-1,-1,4,1,2,-6,2,-3,-1,-6,-5,-5,-4,-1,-4,4,-5,5,-7,4,-3,3,-4,3,-9,-1,-9,-4,-3,-6,-3,-4,-4,-6,-5,-2,3,1,4,-3,2,-5,1,-2,3,-2,5,-5,2,-4,0,1,4,-5,0,0,-5,-3,-8,-1,-4,0,-4,3,0,2,-5,1,-4,3,-3,3,0,3,-3,1,0,3,-3,2,-4,0,-3,0,-2,0,-2,1,-3,1,-1,2,-5,0,-2,-3,0,-5,4,-6,4,-1,2,-3,4,0,4,-2,3,1,3,-2,2,-2,2,0,3,-3,3,-2,2,-1,-3,-1,3,0,3,2,5,-1,3,2,4,-2,3,1,6,-2,2,-2,6,-1,7,-2,4,-3,-3,-6,-3,-3,0,-3,1,2,6,-1,5,-4,6,0,2,-3,0,-3,4,-2,3,0,3,-1,2,-2,3,-5,0,1,-2,-2,-3,-2,1,0,-1,-2,1,-2,0,-1,-2,-3,1,-6,-2,0,-3,-3,-3,-7,-4,-5,-5,-4,-4,-5,-3,0,-2,-3,-1,-4,-2,-2,-1,-2,-3,1,-7,0,-4,-2,-5,0,-8,-2,0,-3,-4,2,-2,-5,-1,-1,-4,-2,-1,-5,5,-2,6,-2,6,-2,2,-3,5,-1,6,-1,3,-4,7,-2,10,-2,6,0,6,-1,5,-7,-3,-4,0,-6,6,2,2,-1,2,-6,4,-4,2,-1,3,-4,4,-9,-1,-8,0,-8,-1,-9,2,-5,1,-6,1,-2,6,-3,1,-3,-1,-5,-3,-7,2,-5,4,-4,1,-4,5,-3,7,-3,-1,-3,2,-2,-2,-3,0,1,-2,-1,-1,2,-4,2,-5,3,-1,0,-1,4,-3,0,-2,0,-1,0,-2,2,-1,0,-2,1,-1,0,3,1,3,1,1,2,-2,0,-3,-1,-3,1,-2,1,0,0,-1,4,1,4,0,3,0,3,3,4,3,3,3,2,2,0,-3,-1,0,1,-4,2,-4,3,-2,4,0,3,-1,2,-3,1,-2,2,0,0,-1,-2,-3,-1,-2,-2,-1,-2,-4,-2,0,-1,-1,-1,-2,1,-4,-1,0,-2,0,-3,-2,0,-3,-2,-1,-3,0,-2,-1,0,-2,-2,-1,-3,0,-3,-1,-2,-1,-4,-1,-1,-2,0,-2,-5,-2,-8,-2,-5,-4,-2,0,-1,0,-3,-2,-3,-1,-5,0,-1,-1,-1,-1,-1,0,-1,-2,-3,1,-1,-1,-4,0,-1,3,0,3,-1,1,-1,4,-1,2,1,0,0,3,0,1,0,2,-1,2,-1,1,-1,2,-2,2,-3,4,-1,4,-4,4,-2,1,-3,4,-1,4,0,3,-3,5,-2,2,-3,1,-1,3,0,1,-1,3,-2,1,-2,4,-3,4,-2,3,-3,0,1,3,0,2,1,2,0,1,-2,-3,-1,-3,-1,-3,-1,-1,-2,2,-2,2,-4,7,2,-5,3,-6,4,-7,1,-3,2,-3,4,-5,-1,-1,1,-3,5,-5,1,-1,2,-5,-1,-1,1,-5,1,-6,2,-1,3,-2,3,-6,1,-4,3,-3,7,-5,3,-2,2,-3,2,-2,2,-2,2,-1,-1,-2,-2,-1,2,-2,1,-1,1,-2,3,-2,2,0,5,1,5,1,5,2,2,0,2,1,3,0,1,0,3,1,2,0,3,2,2,0,0,-1,-1,-3,0,-3,-1,-2,-1,-5,-3,-6,-3,-6,-4,-7,-4,-6,-6,-7,-5,-4,-8,-5,-4,-4,-6,-6,-1,-2,-1,-1,-4,-2,-1,-2,-2,-1,0,-3,-2,-2,-1,-4,-2,-1,-2,-7,0,-2,3,-2,0,-1,-1,-4,0,-1,0,-2,2,-4,2,-4,2,-2,0,-2,0,-5,1,-4,0,-8,1,-2,-2,-4,-2,-4,-3,-3,-4,-2,-6,-2,-6,-5,-2,-1,-3,-4,-2,-1,0,-3,2,-4,1,-3,0,-2,1,1,0,-5,-1,-3,1,-1,-1,-2,-2,-1,-4,-2,-6,-3,-2,-2,0,-2,2,0,-1,-3,-1,-3,-1,-5,-1,-2,-3,-2,-1,-1,-2,-3,-2,-2,-3,-4,-5,-5,-4,-3,-4,-2,-5,-2,-2,0,-1,-2,-3,1,-3,-1,-5,1,-3,-1,-2,1,-5,-2,-5,-1,-3,-2,-2,0,-2,2,-2,0,-2,2,0,-1,-1,2,0,3,-1,3,1,1,0,4,-3,4,-3,5,-3,6,-4,4,-2,4,-1,4,-1,4,-2,8,0,6,-1,2,-2,3,-2,4,-3,6,-1,3,-4,5,0,3,-1,4,1,4,2,5,0,2,2,4,1,2,3,4,1,2,1,4,-1,2,-1,2,-1,3,-2,3,1,1,1,2,-1,5,-1,3,-3,4,1,1,-1,1,-1,4,-5,5,-5,5,-3,4,-3,5,0,2,1,2,1,3,1,4,0,1,1,5,1,4,-2,4,-2,1,-1,2,-2,0,1,2,-6,-2,-2,0,-2,-1,-4,0,-2,3,-2,4,-3,3,-4,0,-5,0,-4,0,-4,-1,-8,-3,-2,-2,-5,-1,-4,1,-3,0,-3,1,-3,0,-6,-1,-4,-1,-5,-2,-1,0,-1,0,-5,2,-5,4,-4,3,-3,3,-2,0,-3,2,-3,3,-1,2,0,4,-2,2,-2,2,-2,1,-1,1,0,2,-1,1,-2,1,-2,2,-2,1,-2,1,0,1,-1,1,0,1,-1,4,0,2,-2,4,-2,2,2,1,2,3,2,3,-1,2,2,3,0,5,0,4,-1,3,1,2,-2,3,-2,2,0,2,0,2,2,2,2,2,-1,2,2,4,3,3,2,1,1,3,0,2,2,3,3,2,3,5,3,2,5,1,4,3,2,1,4,5,-1,6,2,4,0,3,4,3,5,2,3,3,4,5,1,3,4,0,3,-2,5,0,5,-1,2,0,5,3,5,0,4,3,4,1,9,1,8,0,3,0,4,2,6,0,2,-2,3,1,6,2,3,-1,0,-2,4,1,1,0,-3,-3,0,-2,2,-2,-1,-4,-3,-2,1,-3,2,0,2,-3,1,0,6,-2,2,0,5,0,6,-3,3,-4,4,-1,7,-2,5,-3,3,2,2,2,-1,4,2,2,3,3,4,0,6,-1,2,-2,2,0,2,-1,5,0,1,-2,6,0,5,-1,5,-2,3,-1,3,2,2,1,5,1,3,-1,2,-2,1,1,4,-1,4,0,2,1,2,2,-1,0,2,2,1,4,0,1,1,0,1,5,3,3,0,4,1,2,-2,2,2,2,-3,0,-4,1,-4,-3,-7,0,-4,2,-6,0,-1,-2,-4,0,-4,2,-6,0,-3,5,-3,3,2,4,-3,2,5,5,8,0,2,4,10,-1,6,4,6,1,8,0,9,-3,7,-2,6,1,4,-1,6,3,1,2,-2,3,-3,2,-2,1,-2,1,-7,4,-5,2,-5,3,4,1,4,4,-3,2,8,2,0,1,-5,0,-4,-1,-3,-2,-5,0,-4,-2,0,-3,3,-1,5,0,-1,-1,-6,-1,-7,-3,-2,1,1,2,-6,2,1,1,5,1,-2,1,-7,2,-1,2,-4,-1,-2,-3,-4,-4,0,-1,-2,-1,-2,1,-1,-6,-3,-3,-2,-3,2,-3,1,-2,4,-1,-1,-2,-6,0,-2,-2,-4,-2,-2,2,0,1,-3,0,-2,1,-6,-2,3,-2,-3,-1,-2,0,-3,2,-1,-1,1,-3,3,-2,-2,-1,3,-2,2,-2,0,-3,-4,2,1,-3,-3,0,2,-5,-4,0,-4,2,-2,4,0,4,-2,2,-3,3,0,1,-1,0,0,2,-3,1,0,3,0,3,1,2,-1,0,-1,1,-2,1,-2,1,-4,2,-3,2,-5,2,-4,3,1,1,-2,2,0,1,-4,1,-1,-2,-2,2,0,1,1,0,1,1,-4,1,-4,-2,0,-3,-1,-1,2,-3,5,-2,2,-4,6,-4,4,0,1,-1,-2,-1,5,-2,4,-2,4,-2,0,-1,-1,-2,-2,2,-5,1,-2,-3,4,-2,-1,-2,-2,-1,-2,-4,-3,0,0,1,1,3,2,1,-2,3,-2,2,-2,1,-1,2,-4,1,-2,2,-4,0,-3,3,-5,3,-3,3,-2,5,-2,0,-5,2,-2,-1,-3,-2,-2,-1,-4,-2,-10,1,-7,-2,-1,-3,0,-3,-5,-3,-6,-1,0,-2,-3,-2,-2,-4,2,-3,-3,-3,-1,-3,-4,-1,-4,-4,-6,0,-5,0,-3,-1,-2,-2,-2,0,-2,2,-2,3,-4,0,-2,-1,-3,1,-2,-1,0,4,0,3,-2,1,-2,2,1,3,2,2,0,2,1,3,0,2,-1,2,0,1,0,4,-2,2,7,4,6,-1,7,0,5,-1,4,0,8,0,3,3,1,10,-5,5,-4,3,-7,2,-1,3,7,2,8,-2,-2,6,5,-2,12,4,1,4,5,1,4,1,2,1,5,7,6,3,5,-1,1,1,4,1,1,-1,3,2,-1,2,0,3,-2,3,-1,5,1,1,2,2,4,0,2,1,4,2,0,-3,-2,-2,1,-1,3,-1,-2,-2,-1,1,-4,-4,2,-2,0,-2,5,-1,0,-2,5,1,3,1,5,-2,3,-1,3,1,8,3,6,1,5,-1,0,-1,5,0,1,2,7,2,-1,4,0,4,3,3,5,2,4,-4,4,0,1,4,0,3,-2,-1,-3,2,0,3,6,1,6,1,6,-1,5,0,6,3,-6,3,-9,-1,-9,-2,-8,-1,-3,3,-4,2,1,5,-3,4,3,3,4,3,12,6,3,1,-1,2,-6,2,-9,-1,-5,-4,1,-3,-8,-4,-10,-4,-3,-7,3,-4,5,-3,-5,-5,-5,-1,-2,-9,-3,-4,-6,0,-3,-4,-5,0,-2,5,-4,5,-4,7,-3,3,-10,-5,-7,-2,-7,3,-1,5,-2,12,5,3,13,4,10,5,9,7,12,10,8,4,14,6,11,2,8,0,8,4,9,0,9,1,15,-4,-6,-1,6,-3,5,2,8,-3,14,-2,18,-5,4,-3,1,-3,-6,-3,-8,-1,-22,4,-4,-1,8,-3,1,-8,6,-1,4,-2,1,3,-3,2,3,2,12,-3,4,1,-3,3,11,5,5,0,5,-2,3,4,-5,3,3,3,-4,3,14,-2,3,-3,-6,0,0,-3,4,-2,7,1,2,4,10,2,18,4,3,0,-5,-3,7,-1,3,2,10,0,7,2,6,-3,5,4,-5,3,3,1,15,-1,6,-2,19,-6,3,3,-5,3,0,1,-6,0,1,3,-2,4,-1,1,10,5,3,4,4,1,13,-1,1,-3,-5,-4,3,-2,2,-3,-1,-7,5,-3,-2,-3,-10,-7,6,-1,2,2,6,1,1,2,4,3,-3,3,3,3,-6,0,-1,3,4,5,-6,4,8,4,-1,3,3,0,2,-3,-2,-4,6,-1,-2,3,8,2,10,1,9,-3,-4,4,0,5,8,1,12,0,11,1,-4,2,6,4,6,0,9,2,14,1,1,1,13,1,4,-1,12,2,9,0,1,2,5,2,12,2,8,-1,-6,-1,11,-1,1,-3,5,2,14,0,12,-3,4,-2,-2,-2,-5,-2,-13,-3,-4,-1,6,-1,8,-1,4,1,3,-3,2,1,8,1,16,-1,1,-2,21,-1,0,4,11,-1,8,0,8,-3,2,-3,-3,-2,7,-4,7,-2,5,5,8,-2,9,1,9,-1,4,1,8,-1,-3,5,6,2,46,-3,4,-3,13,-4,20,1,10,-1,4,-2,0,-3,6,-2,6,1,9,0,10,-1,9,1,9,-5,6,2,-4,3,2,2,16,-1,11,0,14,-2,7,-2;246,206,2,-3,2,0,2,-2,-4,0,-1,-4,-1,-2,-2,-1,0,-2,2,-4,5,-1,3,-3,7,0,8,1,1,1,-1,4,0,5,-3,1,1,4,-4,0,2,4,4,-1,5,2,-4,3,-1,3,-4,-2,-1,-3,-1,3,-1,1,1,2,0,2,-6,2,-3,4,-2,1,0,2,4,0,1,3,4,1,4,-1,1,5,-1,3,-5,0,-4,1,-6,-2,-4,-1,-3,-3,-5,-1,-5,-5,5,-5,-1,-3,6,-6,3,-3;-478,346,-3,-2,-7,1,-4,0,-7,2,4,2,4,2,5,-2,3,-1,2,-1,3,-1;-900,358,0,-4,-5,0,-1,1,6,3;-900,358,1,0,4,0,7,-2,-5,-2,-7,0,0,4;-453,347,0,-5,7,4,6,-3,-2,-4,5,-3,5,4,4,4,0,5,7,0,8,-1,7,-2,0,-3,-4,-2,4,-3,-1,-2,-10,-4,-7,-1,-5,2,-1,-3,-5,-4,-2,-2,-5,-4,-8,0,-4,-2,0,-3,-6,-1,-6,-4,-5,-6,-2,-3,0,-6,7,-1,2,-5,3,-4,7,1,9,-2,5,-2,3,-2,7,-1,5,-2,8,-1,6,0,-1,-5,1,-5,4,-5,7,-5,4,2,3,5,-3,8,-3,2,8,3,6,3,2,4,0,3,-4,4,-6,4,6,5,-2,5,-2,8,4,1,9,-2,5,0,4,1,4,-1,7,-3,1,-2,9,-1,0,-4,2,-6,4,-1,4,-3,7,3,5,5,3,3,4,-5,6,-6,6,-6,-2,-3,7,-3,4,-3,8,-1,3,-2,2,-4,4,-1,2,-2,1,-5,-4,-2,-4,-2,-8,-2,-6,-4,-9,-1,-10,1,-8,0,-5,0,-4,-3,-7,-3,-7,-6,-6,-5,5,1,8,6,10,5,8,0,4,-2,-5,-4,2,-5,2,-4,6,-2,8,0,5,6,1,-4,3,-1,-6,-4,-11,-3,-5,-2,-6,-3,-4,0,0,4,9,4,-8,0,-6,0,1,-2,-5,-2,-5,-2,-6,-2,-2,-3,-1,-1,0,-2,2,-3,2,0,-1,2,2,-1,-1,-2,-3,-1,-3,0,-3,0,-2,-1,-3,0,-5,-1,8,1,1,-1,-7,-2,-3,0,0,1,-1,-2,1,0,-1,-3,-4,-4,0,1,-1,0,-2,1,1,-2,2,-1,0,-2,-2,-2,-3,-4,1,4,-2,2,-1,4,-1,-2,1,-4,-3,1,3,-1,1,-5,1,-1,1,-1,0,-5,-3,-4,-5,-1,-3,-3,-3,-1,-2,-2,-1,-1,-6,-3,-2,-3,-3,-3,0,-3,0,-4,2,-4,2,-4,0,-2,3,-6,0,-3,-1,-2,-1,-3,-1,-1,-3,1,-1,2,-2,1,-2,5,-3,3,0,2,1,4,-2,3,-4,4,-1,0,-6,-2,-3,3,-3,1,-6,-1,-4,1,-4,0,-2,-1,1,-2,0,-2,1,-1,-1,0,-2,1,-2,-1,-3,0,-4,2,-4,0,-4,1,-3,0,-4,-2,-5,-3,-5,-2,-3,-3,-1,-2,0,-4,0,-2,1,-2,-2,-4,-1,-4,0,-6,0,-3,1,-3,1,-2,1,-4,3,-4,2,-2,2,-3,5,-1,2,-2,4,1,4,1,4,1,3,0,3,2,1,3,1,5,1,1,3,1,5,1,5,0,3,1,1,-1,0,-3,-3,-3,-1,-3,1,-1,-1,-2,-1,-4,-1,2,-1,0,0,-1,0,-2,0,-2,0,-1,-1,-1,1,-1,-1,-2,-1,-2,-1,0,-1,-2,2,0,2,0,0,-1,1,1,2,0,1,0,2,0,3,0,1,0,1,1,2,0,1,-1,1,1,1,0,2,-1,1,0,2,-1,1,-1,2,-1,1,-1,0,-2,0,-1,-1,-2,-1,-2,0,-2,1,-2,0,-2,-1,0,-1,-3,1,-1,-1,-1,0,-1,1,-1,1,-3,2,-2,2,-2,2,-2,0,-1,2,0,2,-1,2,0,2,2,3,1,2,1,3,0,0,-1,2,0,3,-1,1,-1,2,-2,3,0,4,4,2,0,0,2,1,4,2,2,4,1,0,1,4,-1,4,3,2,1,2,2,2,0,1,-1,-1,-2,0,-1,-3,-1,2,-2,0,-3,-2,-3,2,-4,2,1,1,3,-2,2,0,4,6,2,0,2,1,2,2,-4,4,0,3,-3,0,-1,5,0,5,0,3,-2,4,-1,2,2,0,1,7,1,6,0,-5,-2,2,-2,4,-1,4,-2,1,-4,2,0,2,-1,4,-2,3,-3,0,-3,2,0,2,-2,2,-2,6,-1,1,1,4,0,5,-1,2,-1,4,-1,5,-4,1,-2,1,0,2,-3,2,-8,3,-1,0,-4,-3,-4,1,-1,9,-1,0,-5,4,3,6,-2,8,-3,3,-3,-1,-2,6,1,10,-3,7,1,7,-5,7,-5,4,-2,4,0,2,-1,2,-7,0,-3,-2,-8,-2,-3,-7,-7,-3,-6,-4,-4,-1,0,-2,-4,1,-9,-2,-8,0,-3,-2,-2,-1,-7,-5,-7,-1,-5,-4,-2,-1,-3,-5,0,-8,-2,-4,-2,-5,-1,-6,-4,-4,-5,-1,-4,1,-3,-1,-5,-1,-2,-4,-3,-5,-9,-5,-4,-3,-2,-3,-5,-3,-3,-2,-3,-6,-3,-3,1,-3,0,-5,2,-3,0,-3,2,0,-2,6,-4,-1,-4,3,-2,0,-3,-5,-6,-7,-3,-10,-1,-6,1,1,-3,-1,-4,1,-2,-3,-2,-5,-1,-5,2,-2,-1,1,-5,3,-2,3,2,2,-3,-5,-1,-4,-3,-1,-6,-1,-2,-5,0,-3,-3,-2,-4,5,-3,5,-1,-2,-5,-6,-2,-3,-6,-5,-2,-2,-3,2,-5,3,-3,-2,1,-4,0,-3,-2,-4,-1,-1,-5,-2,0,-6,1,-6,4,-6,3,-1,3,1,3,-2,3,-1,9,2,4,5,4,-7,2,5,4,1,8,6,-1,2,10,-3,1,-2,-6,-3,1,2,7,2,9,2,4,-2,5,0,5,2,0,3,8,4,8,2,8,-1,7,1,5,0,6,2,6,1,9,2,11,2,11,-1,8,-1,7,-5,3,0,2,-10,5,-9,6,-4,3,-2,4,1,1,-5,7,-4,9,-5,10,-2,2,-2,4,-4,3,-3,2,1,3,-2,4,2,4,3,3,3,4,-1,2,-2,-2,-3,2,1,1,-1,5,2,0,1,4,2,3,0,2,2,1,4,2,-1,1,2,1,0,2,1,2,2,0,2,4,2,2,-1,1,0,3,-1,5,1,1,0,4,-2,3,-2,2,-1,2,1,2,-1,0,-1,2,-3,1,-2,0,-1,-2,-2,-1,-1,-1,0,-1,2,-2,-1,-1,-1,-1,-2,0,-1,3,-1,-1,-2,1,-1,2,-2,0,-1,0,-2,0,0,-1,-1,1,-3,1,-1,1,1,1,0,1,-2,1,-2,1,-1,1,-1,2,-1,0,0,-1,-1,-1,-1,1,-1,1,-1,1,0,1,1,2,-2,0,1,1,-1,2,-3,2,-1,2,-2,1,-2,3,1,0,0,1,-2,1,-1,-1,-2,0,-2,0,-2,1,-3,1,-1,1,-3,1,-3,0,-2,1,-3,2,-6,5,-2,2,-4,1,-3,0,-4,-2,-3,-1,-3,2,-4,1,-5,2,-3,1,-6,2,-4,2,-2,2,-2,0,-5,1,-3,3,-5,3,-2,3,-2,2,2,1,-1,1,2,1,0,2,-2,2,0,2,-2,3,-5,5,-5,4,-2,3,-4,2,-1,1,1,3,-3,1,-3,3,-1,3,-3,1,-3,2,-2,3,0,1,-3,4,-2,4,0,2,-3,2,-2,0,-3,1,-1,-2,1,-2,1,-4,1,-2,4,-4,1,-1,1,0,0,-2,1,0,1,-3,2,-1,1,-2,3,-3,2,-4,1,-3,1,-2,1,-3,2,0,2,-2,2,-2,0,-1,-2,-2,-1,0,-1,3,-4,3,-3,2,-3,2,0,3,-1,3,-2,2,-3,2,-1,-1,-1,2,-3,1,-3,3,2,0,2,2,0,2,-4,3,-3,2,-1,3,-2,3,-3,4,-2,5,0,2,-4,3,-2,1,-1,1,-2,0,-2,2,-5,0,-1,1,-1,3,-5,5,-4,7,0,1,-2,2,-4,4,0,4,-3,3,1,4,0,4,-2,4,2,5,1,9,0,6,-2,5,-1,2,0,1,7,-2,3,-5,1,2,-1,4,-1,4,-1,0,-10,5,-3,2,-9,2,-3,5,1,3,-7,2,-1,4,-6,3,0,3,-2,2,-5,1,-1,5,-7,4,-2,5,-5,0,-8,0,-6,2,-10,5,-5,1,-9,1,-7,0,-10,2,-6,2,-5,-1,1,-3,-3,0,-6,-1,-4,-2,-6,-1,0,3,2,5,5,1,-1,1,-6,-2,-4,-4,-7,-3,4,-3,-5,-3,-6,-2,-5,-2,-1,-2,-8,-3,-1,-2,-6,-2,-3,0,-5,-1,-5,-2,-4,-2,-9,-1,-1,1,6,2,5,2,5,2,6,1,3,2,7,3,1,1,3,2,1,4,3,3,-6,-2,-2,1,-2,-2,-4,3,-1,-2,-2,2,-5,-2,-3,0,0,3,1,2,-4,2,-6,-1,-4,2,-4,2,0,2,-4,2,2,3,4,3,2,3,4,0,4,-1,4,3,3,-1,4,2,-1,2,-3,1,4,2,-3,0,-5,-1,-2,-1,-4,1,-7,-1,-7,1,-2,2,-7,3,7,2,12,3,4,0,-1,-3,11,1,-4,3,-7,2,-3,2,-5,2,-7,2,3,2,9,1,6,2,1,2,5,3,5,0,10,2,4,0,8,3,8,-1,3,-3,3,1,8,0,0,-1,7,-1,5,1,11,-2,10,0,3,-1,7,1,8,-2,5,0,9,-2,8,-2,5,-1,5,3,6,1,7,0,8,2,8,1,3,-2,4,1,1,2,4,0,8,-5,7,4,1,-4,6,1,2,1,6,0,7,-2,12,-2,7,-1,5,1,7,-3,-8,-2,10,-2,13,1,4,1,6,-3,5,2,-5,3,3,1,6,0,4,1,4,-1,5,-3,6,0,9,-2,7,1,8,0,-1,3,5,1,7,-2,0,-5,4,4,4,0,2,5,-6,3,-5,2,0,6,6,4,7,-1,5,-2,6,-6,-4,-2,9,-2;-571,366,-2,-3,11,2,7,-3,5,3,5,-2,4,-5,3,2,-4,5,4,1,5,-1,6,-2,3,-5,2,-3,8,-3,9,-2,0,-2,-9,0,4,-2,-2,-2,-9,1,-9,1,-6,0,-9,-2,-15,-1,-7,0,-2,2,-7,1,-5,0,-6,4,4,0,7,1,7,0,7,1,-10,1,-10,0,-8,0,-2,2,11,2,-7,-1,-9,2,4,4,4,2,13,3,5,-1;-523,367,-4,-3,-8,3,2,1,7,0,3,-1;-382,366,1,-2,-6,0,-5,0,-5,0,-2,0,-5,3,0,1,2,1,12,-1,8,-2;-433,366,4,-3,5,4,12,2,9,-5,-1,-4,10,2,5,2,11,-3,7,-2,1,-2,9,1,5,-3,12,-2,4,-2,5,-5,-9,-2,12,-4,8,-1,7,-4,8,-1,-2,-3,-9,-6,-6,2,-8,5,-6,-1,-1,-3,6,-2,6,-3,2,-1,4,-5,-2,-4,-6,2,-13,4,7,-5,5,-3,1,-1,-13,2,-11,3,-6,2,2,1,-8,3,-7,2,0,-1,-15,-1,-4,2,4,4,9,0,10,0,-1,2,1,3,7,4,-2,3,-2,1,-7,3,-10,1,3,2,-5,3,-5,0,-4,2,-2,-2,-10,0,-18,1,-10,1,-8,1,-5,2,6,2,-7,0,-2,5,4,5,5,2,13,1,-4,-3;-502,369,6,-1,9,1,1,-2,-4,-2,7,-2,-1,-5,-8,-2,-5,1,-3,2,-12,4,0,1,10,0,-6,3,6,2;718,366,-8,0,-10,1,-1,0,5,2,6,0,7,-2,1,-1;-466,364,-5,-4,-6,0,-3,5,0,2,3,2,4,2,11,0,9,-2,-7,-4,-6,-1;-602,357,-13,-2,-3,2,-12,2,2,2,4,4,4,3,-5,3,17,1,7,-1,13,0,5,-2,5,-2,-6,-1,-12,-3,-6,-4,0,-2;754,375,-6,-2,-8,1,-9,2,1,1,9,0,13,-2;-468,375,-3,-2,-7,0,-6,2,3,2,7,1,4,-2,2,-1;725,378,-4,-4,-18,0,-8,-1,-10,3,3,4,6,1,13,-1,18,-2;-492,384,3,-3,0,-2,-2,-4,-8,-1,-5,1,0,3,-9,0,0,4,6,0,7,1,7,0,1,1;-541,381,2,-2,4,1,6,0,0,-3,-3,-2,-16,-1,-13,-2,-8,0,0,2,10,2,-23,-1,-7,1,7,5,5,1,14,-1,9,-3,9,-1,-7,5,4,2,5,-1,2,-2;288,354,-3,-1,-17,1,-1,2,-9,1,-1,3,5,1,0,3,10,4,-4,1,12,4,-2,2,11,3,17,3,17,1,8,2,10,1,3,-2,-3,-2,-18,-2,-15,-3,-16,-4,-7,-5,-8,-5,1,-4,10,-4;-473,385,5,-1,10,0,4,-2,-1,-2,6,-1,3,-1,7,0,7,-1,8,1,10,1,8,0,6,-2,1,-2,-3,-2,-8,-1,-6,1,-14,-1,-11,0,-8,1,-13,1,-2,3,0,2,-5,3,-11,0,-6,2,2,2,11,-1;-581,388,-1,-4,-4,-1,-4,-1,-10,-2,-7,-1,-7,2,8,3,10,4,8,-1,7,1;-469,388,-2,-1,-10,1,-1,1,10,0,3,-1;-551,388,-9,-1,-8,2,4,1,8,1,7,-1,-2,-2;124,389,-12,-2,-8,1,3,2,-3,1,10,1,2,-2,8,-1;-548,393,-6,-1,-9,0,0,1,6,1,2,0,7,-1;-479,390,-8,-1,-4,1,-2,2,0,2,6,0,3,0,6,-2,-1,-2;-500,392,2,-2,-9,0,-8,2,-11,0,5,1,-6,2,0,2,9,-1,14,-2,4,-2;525,392,-28,-2,9,6,4,1,4,-1,13,-2,-2,-2;91,399,17,-4,-13,-2,-3,-4,-4,-1,-2,-4,-6,0,-11,3,4,2,-7,1,-10,4,-4,4,14,2,3,-2,7,0,2,2,7,0,6,-1;127,402,10,-2,-7,-2,-15,-1,-15,1,-1,1,-7,0,-5,3,15,1,8,-1,5,1,12,-1;256,403,-7,-1,-5,0,0,-1,-6,-1,-5,1,2,2,-11,0,10,1,8,0,1,-1,2,1,5,1,8,-1,-2,-1;500,394,-11,0,-14,1,-8,2,-4,4,-7,1,13,3,11,1,9,-2,12,-5,-1,-5;-435,398,6,-1,-7,-2,-9,-4,-9,0,-10,1,-6,2,0,2,4,1,-9,0,-5,2,-4,2,4,2,3,2,6,0,-3,1,12,0,6,-2,9,-1,8,-1,4,-4;-342,416,13,-1,11,0,9,-2,0,-1,-13,-2,-12,-1,-4,-1,11,0,-12,-4,-8,-1,-9,-4,-10,-1,-3,-1,-16,0,7,-1,-3,-1,4,-2,-5,-2,-7,-1,-3,-2,-7,-2,1,-1,8,0,1,-1,-14,-3,-13,1,-15,-1,-7,1,-9,0,-1,3,9,1,-2,4,3,0,13,-2,-7,3,-8,1,4,2,9,1,2,2,-8,2,-2,2,14,0,4,-1,8,2,-11,1,-18,0,-9,1,-4,2,-6,2,-1,1,8,1,5,1,10,0,8,2,6,0,5,-1,4,2,7,1,8,1,16,0,2,-1,15,1,11,0,11,0;-135,418,31,-4,-9,-2,-20,-1,-27,0,3,-1,18,1,15,-2,9,1,5,-1,-6,-3,13,2,24,2,15,-1,3,-3,-20,-3,-3,-1,-16,-1,11,0,-5,-4,-5,-3,1,-6,6,-3,-8,0,-8,-2,9,-3,1,-4,-5,0,6,-5,-11,0,6,-2,-2,-2,-7,0,-7,0,6,-4,0,-2,-9,2,-3,-1,7,-2,6,-3,2,-4,-9,-1,-4,2,-6,3,2,-3,-6,-3,13,0,7,0,-13,-5,-14,-4,-14,-1,-6,0,-5,-2,-7,-6,-11,-3,-3,0,-7,-2,-7,-1,-4,-3,0,-3,-3,-4,-8,-4,2,-3,-2,-5,-3,-5,-7,0,-7,4,-10,0,-5,3,-4,5,-8,6,-3,3,0,5,-7,5,1,3,-3,2,5,6,8,2,2,2,1,4,-6,-2,-3,-1,-4,-1,-6,2,-1,3,2,3,5,0,10,-1,-9,3,-4,2,-5,-1,-4,1,5,5,-3,2,-4,3,-6,6,-6,1,0,3,-13,3,-11,0,-13,0,-13,-1,-5,2,-9,3,13,2,10,0,-21,1,-11,2,0,2,19,3,18,2,2,2,-13,2,4,2,18,3,7,1,-2,2,12,1,15,1,15,0,6,-2,13,3,12,-2,7,0,10,-2,-11,3,0,2,17,3,18,0,6,2,18,0,40,0';
+const SAUDI='35,29.4 36.1,29.2 36.5,29.5 36.7,29.9 37.5,30 37.7,30.3 38,30.5 37,31.5 39,32 39.2,32.2 40.4,31.9 41.9,31.2 44.7,29.2 46.6,29.1 47.5,29 47.7,28.5 48.4,28.6 48.8,27.7 49.3,27.5 49.5,27.1 50.2,26.7 50.2,26.3 50.1,25.9 50.2,25.6 50.5,25.3 50.7,25 50.8,24.8 51.1,24.6 51.4,24.6 51.6,24.2 51.6,24 52,23 55,22.5 55.2,22.7 55.7,22 55,20 52,19 49.1,18.6 48.2,18.2 47.5,17.1 47,16.9 46.7,17.3 46.4,17.2 45.4,17.3 45.2,17.4 44.1,17.4 43.8,17.3 43.4,17.6 43.1,17.1 43.2,16.7 42.8,16.3 42.6,16.8 42.3,17.1 42.3,17.5 41.8,17.8 41.2,18.7 40.9,19.5 40.2,20.2 39.8,20.3 39.1,21.3 39,22 39.1,22.6 38.5,23.7 38,24.1 37.5,24.3 37.2,24.9 37.2,25.1 36.9,25.6 36.6,25.8 36.3,26.6 35.6,27.4 35.1,28.1 34.6,28.1 34.8,28.6 34.8,29 35,29.4'.split(' ').map(p=>p.split(',').map(Number));
+const MADINAH=[24.47,39.61];
+let LAND=null;
+function landRings(){ if(LAND) return LAND; LAND=LAND_ENC.split(';').map(r=>{ const a=r.split(',').map(Number), out=[]; let x=0,y=0; for(let i=0;i<a.length;i+=2){ x+=a[i]; y+=a[i+1]; out.push([x/5,y/5]); } return out; }); return LAND; }
+function drawWorld(x,w,h,opt={}){
+  const g=x.createLinearGradient(0,0,0,h); g.addColorStop(0,opt.ocean0||'#0c2452'); g.addColorStop(.5,opt.ocean1||'#14407f'); g.addColorStop(1,opt.ocean0||'#0c2452'); x.fillStyle=g; x.fillRect(0,0,w,h);
+  const X=lon=>(lon+180)/360*w, Y=lat=>(90-lat)/180*h;
+  x.strokeStyle='rgba(150,190,255,.13)'; x.lineWidth=Math.max(1,w/1600);
+  for(let lon=-150;lon<180;lon+=30){ x.beginPath(); x.moveTo(X(lon),0); x.lineTo(X(lon),h); x.stroke(); }
+  for(let lat=-60;lat<=60;lat+=30){ x.beginPath(); x.moveTo(0,Y(lat)); x.lineTo(w,Y(lat)); x.stroke(); }
+  x.fillStyle=opt.land||'#2e7461'; x.strokeStyle=opt.coast||'rgba(150,235,200,.55)'; x.lineWidth=Math.max(1,w/1400);
+  for(const sh of [-360,0,360]){ x.beginPath(); landRings().forEach(r=>{ r.forEach(([lo,la],i)=>{ const px=X(lo+sh),py=Y(la); if(i) x.lineTo(px,py); else x.moveTo(px,py); }); x.closePath(); }); x.fill('evenodd'); x.stroke(); }
+  x.fillStyle='rgba(255,198,92,.38)'; x.strokeStyle='#ffc65c'; x.lineWidth=Math.max(1.5,w/900); x.beginPath(); SAUDI.forEach(([lo,la],i)=>i?x.lineTo(X(lo),Y(la)):x.moveTo(X(lo),Y(la))); x.closePath(); x.fill(); x.stroke();
+}
+function gcKm(a,b){ const R=6371, d2r=Math.PI/180, dl=(b[0]-a[0])*d2r, dn=(b[1]-a[1])*d2r; const s=Math.sin(dl/2)**2+Math.cos(a[0]*d2r)*Math.cos(b[0]*d2r)*Math.sin(dn/2)**2; return 2*R*Math.asin(Math.min(1,Math.sqrt(s))); }
+const fmtN=(n,d=0)=>Number(n).toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:d});
+function extLink(href,text,cls){ return el('a',{class:cls||'ctl ext',href,target:'_blank',rel:'noopener'},[el('span',{text}),icon('ext')]); }
+
+/* ================= OBSERVATORIES ================= */
+const BANDS=[
+ { id:'radio', c:'#ff8a5c', name:B('موجات الراديو','Radio'), wl:B('أطولها: من سنتيمترات إلى أمتار وأكثر','The longest: centimetres to metres and more'),
+   rev:B('النجوم النابضة، والغاز البارد بين النجوم، والمجرات النشطة.','Pulsars, cold gas between the stars, and active galaxies.'), ground:'yes',
+   gtxt:B('نعم. تمر من الغلاف الجوي، وتُرصد حتى في الغيوم وفي النهار.','Yes. They pass through the atmosphere and can be observed even through clouds and in daytime.') },
+ { id:'mm', c:'#ffb84d', name:B('الموجات المليمترية','Millimetre waves'), wl:B('حول المليمتر الواحد','Around one millimetre'),
+   rev:B('الغاز والغبار البارد حيث تولد النجوم والكواكب.','Cold gas and dust where stars and planets are born.'), ground:'part',
+   gtxt:B('جزئيًا. بخار الماء يمتصها، فتُرصد من مواقع عالية جدًا وجافة جدًا.','Partly. Water vapour absorbs them, so they are observed from very high, very dry sites.') },
+ { id:'ir', c:'#ff5d73', name:B('الأشعة تحت الحمراء','Infrared'), wl:B('أطول قليلًا من الضوء الأحمر','A little longer than red light'),
+   rev:B('النجوم المختبئة خلف الغبار، وضوء أبعد المجرات وأقدمها.','Stars hidden behind dust, and light from the most distant, oldest galaxies.'), ground:'part',
+   gtxt:B('جزئيًا. بعضها يُرصد من قمم الجبال الجافة، ومعظمها يحتاج تلسكوبًا في الفضاء.','Partly. Some can be observed from dry mountaintops; most needs a telescope in space.') },
+ { id:'vis', c:'#ffe27a', name:B('الضوء المرئي','Visible light'), wl:B('الجزء الذي تراه أعيننا: من البنفسجي إلى الأحمر','The part our eyes see: violet to red'),
+   rev:B('النجوم والكواكب والمجرات كما تراها العين.','Stars, planets and galaxies as the eye sees them.'), ground:'yes',
+   gtxt:B('نعم، في الليالي الصافية. لكن الهواء المضطرب يجعل الصور ترتعش.','Yes, on clear nights. But moving air makes images shimmer.') },
+ { id:'uv', c:'#b18cff', name:B('الأشعة فوق البنفسجية','Ultraviolet'), wl:B('أقصر قليلًا من الضوء البنفسجي','A little shorter than violet light'),
+   rev:B('النجوم الشابة شديدة الحرارة.','Young, very hot stars.'), ground:'no',
+   gtxt:B('لا تقريبًا. طبقة الأوزون تحجب معظمها، فتُرصد من الفضاء.','Almost none. The ozone layer blocks most of it, so it is observed from space.') },
+ { id:'xray', c:'#62d0ff', name:B('الأشعة السينية','X-rays'), wl:B('أقصر بكثير من الضوء المرئي','Far shorter than visible light'),
+   rev:B('الغاز شديد الحرارة حول الثقوب السوداء، وبقايا النجوم المنفجرة.','Extremely hot gas around black holes, and the remains of exploded stars.'), ground:'no',
+   gtxt:B('لا. الغلاف الجوي يحجبها تمامًا، وهذا يحمينا.','No. The atmosphere blocks them completely, which protects us.') },
+ { id:'gamma', c:'#9fffd6', name:B('أشعة غاما','Gamma rays'), wl:B('أقصر الموجات وأعلاها طاقة','The shortest, most energetic waves'),
+   rev:B('أعنف الانفجارات في الكون.','The most violent explosions in the universe.'), ground:'no',
+   gtxt:B('لا. يحجبها الغلاف الجوي، فتُرصد من الفضاء.','No. The atmosphere blocks them, so they are observed from space.') },
+];
+const BAND_BY=Object.fromEntries(BANDS.map(b=>[b.id,b]));
+const OBS=[
+ { id:'vlt', type:'ground', lat:-24.63, lon:-70.40, bands:['vis','ir'], name:B('التلسكوب الكبير جدًا (VLT)','Very Large Telescope (VLT)'), short:B('VLT','VLT'),
+   where:B('سيرو بارانال، تشيلي','Cerro Paranal, Chile'), alt:B('2,635 م','2,635 m'), size:B('4 تلسكوبات، مرآة كل منها 8.2 م','4 telescopes, each with an 8.2 m mirror'), since:B('1998','1998'),
+   desc:B('مرصد أوروبي على قمة جبل في صحراء أتاكاما، من أجفّ الأماكن على الأرض. يمكن أن تعمل تلسكوباته الأربعة معًا لترى تفاصيل أدق.','A European observatory on a mountaintop in the Atacama Desert, one of the driest places on Earth. Its four telescopes can work together to see finer detail.'),
+   why:B('هواء جاف وسماء صافية في معظم الليالي، بعيدًا عن أضواء المدن.','Dry air and clear skies on most nights, far from city lights.'),
+   high:B('التُقطت به أول صورة لكوكب يدور حول نجم آخر خارج المجموعة الشمسية.','It took the first image of a planet orbiting another star, outside our Solar System.'),
+   site:'https://www.eso.org/public/teles-instr/paranal-observatory/vlt/', sn:'ESO', cam:'https://www.eso.org/public/outreach/webcams/' },
+ { id:'alma', type:'ground', lat:-23.03, lon:-67.76, bands:['mm'], name:B('مصفوفة ألما (ALMA)','ALMA'), short:B('ALMA','ALMA'),
+   where:B('هضبة تشاجنانتور، تشيلي','Chajnantor Plateau, Chile'), alt:B('نحو 5,000 م','About 5,000 m'), size:B('66 هوائيًا','66 antennas'), since:B('2013','2013'),
+   desc:B('مجموعة هوائيات تعمل كأنها تلسكوب واحد عملاق، وترصد موجات مليمترية يصدرها الغاز والغبار البارد حيث تولد النجوم والكواكب.','An array of antennas that act as one giant telescope. It detects millimetre waves from the cold gas and dust where stars and planets are born.'),
+   why:B('بخار الماء في الهواء يمتص هذه الموجات، فاختير موقع مرتفع جدًا وجاف جدًا.','Water vapour in the air absorbs these waves, so a very high, very dry site was chosen.'),
+   high:B('رصد جزيئات عضوية معقدة في الأقراص التي تتكوّن فيها الكواكب.','It detected complex organic molecules in the discs where planets form.'),
+   site:'https://www.eso.org/public/teles-instr/alma/', sn:'ESO', cam:'https://www.almaobservatory.org/en/live-from-chajnantor/' },
+ { id:'keck', type:'ground', lat:19.83, lon:-155.47, bands:['vis','ir'], name:B('مرصد كِك','W. M. Keck Observatory'), short:B('كِك','Keck'),
+   where:B('ماونا كيا، هاواي','Maunakea, Hawaiʻi'), alt:B('أكثر من 4,100 م','Over 4,100 m'), size:B('تلسكوبان، مرآة كل منهما 10 م من 36 قطعة','2 telescopes, each a 10 m mirror of 36 segments'), since:B('1993','1993'),
+   desc:B('تلسكوبان توأمان من أكبر التلسكوبات البصرية في العالم، على قمة بركان خامد في المحيط الهادئ.','Twin telescopes, among the largest optical telescopes in the world, on a dormant volcano in the Pacific Ocean.'),
+   why:B('القمة فوق معظم بخار الماء في الجو، والهواء فوقها مستقر، فتبدو النجوم أوضح.','The summit is above most of the water vapour, and the air over it is steady, so stars look sharper.'),
+   high:B('كان «كِك 2» أول تلسكوب كبير يستخدم البصريات التكيفية التي تصحح ارتعاش صور النجوم (1999).','Keck II was the first large telescope to use adaptive optics, which corrects the shimmer in star images (1999).'),
+   site:'https://keckobservatory.org/', sn:'Keck', cam:'https://mkwc.ifa.hawaii.edu/current/cams/' },
+ { id:'gtc', type:'ground', lat:28.76, lon:-17.89, bands:['vis','ir'], name:B('تلسكوب الكناري الكبير','Gran Telescopio Canarias'), short:B('GTC','GTC'),
+   where:B('جزيرة لا بالما، إسبانيا','La Palma, Spain'), alt:B('نحو 2,300 م','About 2,300 m'), size:B('مرآة 10.4 م من 36 قطعة','10.4 m mirror of 36 segments'), since:B('2007','2007'),
+   desc:B('أكبر تلسكوب بصري وتحت أحمر في العالم، على قمة جزيرة بركانية في المحيط الأطلسي.','The largest optical and infrared telescope in the world, on a volcanic island in the Atlantic Ocean.'),
+   why:B('السحب كثيرًا ما تبقى أسفل القمة، وسماء الجزيرة محمية من التلوث الضوئي.','Clouds often stay below the summit, and the island’s sky is protected from light pollution.'),
+   high:B('مرآته مكوّنة من 36 قطعة سداسية تعمل معًا كمرآة واحدة.','Its mirror is made of 36 hexagonal pieces that work together as one.'),
+   site:'https://www.gtc.iac.es/', sn:'IAC', cam:'https://www.gtc.iac.es/multimedia/webcams.php' },
+ { id:'fast', type:'ground', lat:25.65, lon:106.86, bands:['radio'], name:B('تلسكوب فاست الراديوي','FAST radio telescope'), short:B('FAST','FAST'),
+   where:B('مقاطعة غويتشو، الصين','Guizhou, China'), alt:B('داخل منخفض طبيعي بين التلال','Inside a natural hollow among hills'), altK:'where', size:B('طبق قطره 500 م','A 500 m dish'), since:B('2016','2016'),
+   desc:B('أكبر طبق راديوي منفرد في العالم. لا يرى الضوء، بل «يستمع» إلى موجات الراديو القادمة من الفضاء.','The largest single-dish radio telescope in the world. It does not see light; it “listens” to radio waves from space.'),
+   why:B('التلال حوله تحجب إشارات الراديو التي يصنعها البشر، وشكل الوادي يحتضن الطبق.','The hills around it block human-made radio signals, and the bowl-shaped valley holds the dish.'),
+   high:B('اكتشف أكثر من 1,000 نجم نابض بحلول عام 2024.','It had discovered more than 1,000 pulsars by 2024.'),
+   site:'https://english.cas.cn/newsroom/cas_media/202411/t20241127_892451.shtml', sn:'CAS', siteK:'source' },
+ { id:'rubin', type:'ground', lat:-30.24, lon:-70.74, bands:['vis'], name:B('مرصد فيرا روبين','Vera C. Rubin Observatory'), short:B('روبين','Rubin'),
+   where:B('سيرو باتشون، تشيلي','Cerro Pachón, Chile'), alt:B('2,647 م','2,647 m'), size:B('مرآة 8.4 م وكاميرا 3,200 ميغابكسل','8.4 m mirror, 3,200-megapixel camera'), since:B('2025','2025'),
+   desc:B('يصوّر السماء التي يراها مرة بعد مرة لسنوات، فيصنع ما يشبه «فيلمًا» للكون يكشف كل ما يتحرك أو يتغير.','It photographs the sky it can see again and again for years, making something like a “movie” of the universe that shows whatever moves or changes.'),
+   why:B('سماء مظلمة وجافة وهواء مستقر فوق جبال تشيلي.','Dark, dry skies and steady air over the mountains of Chile.'),
+   high:B('في نحو 10 ساعات من أرصاده الأولى اكتشف 2,104 كويكبات جديدة.','In about 10 hours of its first observations it found 2,104 new asteroids.'),
+   site:'https://rubinobservatory.org/', sn:'Rubin Observatory' },
+ { id:'meerkat', type:'ground', lat:-30.71, lon:21.44, bands:['radio'], name:B('تلسكوب ميركات الراديوي','MeerKAT radio telescope'), short:B('ميركات','MeerKAT'),
+   where:B('منطقة كارو، جنوب أفريقيا','Karoo, South Africa'), alt:B('منطقة شبه صحراوية قليلة السكان','Sparsely populated semi-desert'), altK:'where', size:B('64 طبقًا، قطر كل منها 13.5 م','64 dishes, each 13.5 m across'), since:B('2018','2018'),
+   desc:B('مجموعة أطباق راديوية تعمل معًا، وستصبح جزءًا من مرصد «مصفوفة الكيلومتر المربع» الدولي (SKA).','An array of radio dishes working together. It will become part of the international Square Kilometre Array (SKA).'),
+   why:B('قلة السكان تعني قلة إشارات الهواتف والراديو التي تشوش الرصد.','Few people means few phone and radio signals to interfere.'),
+   high:B('قدّم عند افتتاحه أوضح صورة راديوية حتى ذلك الوقت لمركز مجرتنا درب التبانة.','At its launch it gave the clearest radio view yet of the centre of our Milky Way.'),
+   site:'https://www.sarao.ac.za/', sn:'SARAO' },
+ { id:'elt', type:'ground', build:true, lat:-24.59, lon:-70.19, bands:['vis','ir'], name:B('التلسكوب الضخم جدًا (ELT)','Extremely Large Telescope (ELT)'), short:B('ELT','ELT'),
+   where:B('سيرو أرمازونس، تشيلي','Cerro Armazones, Chile'), alt:B('3,046 م','3,046 m'), size:B('مرآة 39 م من 798 قطعة','39 m mirror of 798 segments'), since:B('قيد البناء، والأرصاد العلمية متوقعة نحو 2030','Under construction; science expected around 2030'),
+   desc:B('سيكون أكبر تلسكوب بصري في العالم، ويُبنى الآن قريبًا من تلسكوب VLT.','It will be the largest optical telescope in the world. It is being built near the VLT.'),
+   why:B('قريب من بارانال، بسماء جافة ومظلمة جدًا.','Close to Paranal, with very dry and very dark skies.'),
+   high:B('من أهدافه دراسة كواكب شبيهة بالأرض حول نجوم أخرى، وربما أغلفتها الجوية.','One of its goals is to study Earth-like planets around other stars, perhaps even their atmospheres.'),
+   site:'https://elt.eso.org/', sn:'ESO', cam:'https://www.eso.org/public/outreach/webcams/' },
+ { id:'sudair', type:'ground', approx:true, lat:25.6, lon:45.6, bands:['vis'], name:B('مرصد حوطة سدير الفلكي','Hawtat Sudair Observatory'), short:B('حوطة سدير','Hawtat Sudair'),
+   where:B('حوطة سدير، منطقة الرياض، السعودية','Hawtat Sudair, Riyadh Province, Saudi Arabia'), alt:B('جامعة المجمعة','Majmaah University'), altK:'operator', size:B('تلسكوب كاسر مع كاميرا CCD','Refracting telescope with a CCD camera'), since:B('2014','2014'),
+   desc:B('مرصد سعودي يُستخدم في تحرّي الأهلّة، ورصد الكسوف والخسوف، وتعريف الطلاب والزوار بعلم الفلك.','A Saudi observatory used for crescent sighting, observing eclipses, and introducing students and visitors to astronomy.'),
+   why:B('يقرّب الرصد الفلكي من الطلاب في المملكة، ويخدم تحرّي الأهلّة.','It brings astronomy closer to students in the Kingdom and supports crescent sighting.'), whyK:'importance',
+   high:B('أُسس عام 2014 ضمن جامعة المجمعة.','It was established in 2014 as part of Majmaah University.'),
+   site:'https://saudipedia.com/en/hawtat-sudayr-observatory', sn:'Saudipedia', siteK:'source' },
+ { id:'hubble', type:'space', bands:['uv','vis','ir'], name:B('تلسكوب هابل الفضائي','Hubble Space Telescope'), short:B('هابل','Hubble'),
+   where:B('مدار منخفض حول الأرض','Low Earth orbit'), alt:B('نحو 500–600 كم فوق الأرض','About 500–600 km up'), altK:'orbit', size:B('مرآة 2.4 م','2.4 m mirror'), since:B('1990','1990'),
+   desc:B('يدور حول الأرض مرة كل 96 دقيقة تقريبًا فوق الغلاف الجوي، فيرى الضوء المرئي وفوق البنفسجي دون ارتعاش الهواء.','It circles Earth about every 96 minutes, above the atmosphere, so it sees visible and ultraviolet light without the shimmer of moving air.'),
+   why:B('الغلاف الجوي يحجب الأشعة فوق البنفسجية ويشوّش صور النجوم.','The atmosphere blocks ultraviolet light and blurs starlight.'), whyK:'whySpace',
+   high:B('ساعدت قياساته في تحديد سرعة تمدد الكون، وفي اكتشاف أن هذا التمدد يتسارع.','Its measurements helped pin down how fast the universe expands, and showed that the expansion is speeding up.'),
+   site:'https://science.nasa.gov/mission/hubble/', sn:'NASA' },
+ { id:'jwst', type:'space', bands:['ir'], name:B('تلسكوب جيمس ويب الفضائي','James Webb Space Telescope'), short:B('جيمس ويب','Webb'),
+   where:B('قرب نقطة لاغرانج الثانية (L2)','Near the second Lagrange point (L2)'), alt:B('نحو 1.5 مليون كم من الأرض','About 1.5 million km from Earth'), altK:'orbit', size:B('مرآة 6.5 م من 18 قطعة','6.5 m mirror of 18 segments'), since:B('2021','2021'),
+   desc:B('أكبر تلسكوب في الفضاء. يرى بالأشعة تحت الحمراء، فيرى عبر سحب الغبار ويلتقط ضوء بعض أقدم المجرات.','The largest telescope in space. It sees in infrared, looking through dust clouds and catching light from some of the oldest galaxies.'),
+   why:B('الأشعة تحت الحمراء تحتاج تلسكوبًا باردًا جدًا. عند L2 يحجب واقي الشمس حرارة الشمس والأرض معًا.','Infrared needs a very cold telescope. At L2 its sunshield blocks the heat of the Sun and Earth together.'), whyK:'whySpace',
+   high:B('أُطلق في 25 ديسمبر 2021، ونُشرت أولى صوره الملونة في يوليو 2022.','It launched on 25 December 2021, and its first colour images were released in July 2022.'),
+   site:'https://science.nasa.gov/mission/webb/', sn:'NASA' },
+ { id:'chandra', type:'space', bands:['xray'], name:B('مرصد تشاندرا للأشعة السينية','Chandra X-ray Observatory'), short:B('تشاندرا','Chandra'),
+   where:B('مدار بيضاوي طويل حول الأرض','A long, oval orbit around Earth'), alt:B('يبتعد حتى نحو 139,000 كم','Goes out to about 139,000 km'), altK:'orbit', size:B('4 مرايا متداخلة','4 nested mirrors'), since:B('1999','1999'),
+   desc:B('يرى الأشعة السينية التي تصدرها الأماكن شديدة الحرارة: بقايا النجوم المنفجرة والغاز الدوّار حول الثقوب السوداء.','It sees X-rays from extremely hot places: the remains of exploded stars and gas swirling around black holes.'),
+   why:B('الغلاف الجوي يحجب الأشعة السينية تمامًا؛ هذا يحمينا، لكنه يمنع رصدها من الأرض.','The atmosphere blocks X-rays completely. That protects us, but it means they cannot be observed from the ground.'), whyK:'whySpace',
+   high:B('حمله مكوك الفضاء «كولومبيا» إلى الفضاء في 23 يوليو 1999.','Space Shuttle Columbia carried it to space on 23 July 1999.'),
+   site:'https://chandra.harvard.edu/about/', sn:'Harvard–Smithsonian / NASA' },
+];
+OBS.forEach(o=>{ o.color=BAND_BY[o.bands[o.bands.length>1&&o.bands[0]==='vis'?1:0]].c; if(o.bands.length>1&&o.bands.includes('vis')&&o.bands.includes('ir')) o.color='#ff9b8a'; if(o.id==='hubble') o.color='#d9c8ff'; if(o.id==='sudair') o.color='#5fe0a8'; });
+const OBS_BY=Object.fromEntries(OBS.map(o=>[o.id,o]));
+const SPEC_QUIZ={ q:B('أي مرصد في القائمة يرصد الأشعة السينية؟','Which observatory in this list detects X-rays?'), o:[B('مرصد تشاندرا','Chandra'),B('مصفوفة ألما','ALMA'),B('تلسكوب فاست','FAST')],
+  ex:B('الغلاف الجوي يحجب الأشعة السينية، لذلك يجب أن يكون مرصدها في الفضاء.','The atmosphere blocks X-rays, so an X-ray observatory has to be in space.') };
+
+/* hook into the shared explore screen */
+EXPLORE.push('observatories'); panel.observatories=null;
+EX.observatories={ title:'observatories', hint:'obsHint', note:'obsNote', builder:buildGlobe, list:()=>OBS };
+function seenOf(kind,id){ return kind==='planets'?id:kind==='stars'?(id==='sun'?'sun':'star-'+id):kind==='observatories'?'obs-'+id:'gal-'+id; }
+OBS.forEach(o=>BADGES.push({id:'obs-'+o.id,name:o.short,color:o.color}));
+MISSIONS.push(
+ { id:'obs3', t:B('زيارة ثلاثة مراصد على الكرة الأرضية','Visit three observatories on the globe'), h:B('في قسم المراصد','In Observatories') },
+ { id:'spectrum', t:B('معرفة المرصد الذي يرى الأشعة السينية','Find the observatory that sees X-rays'), h:B('نشاط الطيف في قسم المراصد','The spectrum activity in Observatories') },
+ { id:'skyplanet', t:B('العثور على كوكب في سماء الليلة','Find a planet in tonight’s sky'), h:B('في قسم سماء الليلة','In Tonight’s Sky') },
+ { id:'iss', t:B('تتبع محطة الفضاء الدولية','Track the International Space Station'), h:B('في قسم مباشر من الفضاء','In Live from Space') },
+ { id:'scale', t:B('حساب الوزن والعمر على كوكب آخر','Work out your weight and age on another planet'), h:B('ميزان الكواكب في قسم الألعاب','Planet Scale, in Games') },
+);
+function obsSeen(){ if(OBS.filter(o=>state.seen.includes('obs-'+o.id)).length>=3) complete('obs3'); }
+DYK.push(
+ { f:B('في 10 أبريل 2019 نُشرت أول صورة لثقب أسود، في مركز المجرة M87، التقطتها شبكة «تلسكوب أفق الحدث» التي تربط مراصد راديوية في قارات مختلفة.','On 10 April 2019 the first image of a black hole was released, at the centre of galaxy M87. It was taken by the Event Horizon Telescope, which links radio observatories on different continents.'), n:B('تلسكوب أفق الحدث','Event Horizon Telescope'), c:'#ffb84d', src:'https://www.eso.org/public/news/eso1907/', sn:'ESO' },
+ { f:B('في 12 مايو 2022 نُشرت أول صورة للثقب الأسود في مركز مجرتنا درب التبانة، وكتلته تقارب 4 ملايين ضعف كتلة الشمس.','On 12 May 2022 the first image of the black hole at the centre of our Milky Way was released. Its mass is about 4 million times the Sun’s.'), n:B('القوس A*','Sagittarius A*'), c:'#ffb84d', src:'https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy', sn:'EHT' },
+ { f:B('محطة الفضاء الدولية تدور حول الأرض نحو 16 مرة في اليوم، فيرى روادها شروق الشمس وغروبها 16 مرة كل يوم.','The International Space Station circles Earth about 16 times a day, so its crew sees about 16 sunrises and sunsets every day.'), n:B('محطة الفضاء الدولية','Space station'), c:'#62d0ff', src:'https://www.nasa.gov/international-space-station/space-station-facts-and-figures/' },
+ ...OBS.map(o=>({ f:o.high, n:o.name, c:o.color, src:o.site, sn:o.sn }))
+);
+
+function buildGlobe(st){
+  const S=st.scene; addStarfield(S);
+  S.add(new THREE.AmbientLight(0x6a72b0,.55)); const sunL=new THREE.DirectionalLight(0xfff3e0,1.25); sunL.position.set(20,6,10); S.add(sunL);
+  const R=4, root=new THREE.Group(); S.add(root);
+  const spin=new THREE.Group(); root.add(spin);
+  const TW2=LOW?1024:2048, cv=document.createElement('canvas'); cv.width=TW2; cv.height=TW2/2; drawWorld(cv.getContext('2d'),TW2,TW2/2);
+  const globe=new THREE.Mesh(new THREE.SphereGeometry(R,LOW?48:72,LOW?32:48),new THREE.MeshPhongMaterial({map:tex(cv),shininess:6,specular:0x0a1022})); spin.add(globe);
+  root.add(atmosphere(R*.985,0x4f8fe0,3.4)); globe.userData.pick=null;
+  const dirOf=(lat,lon)=>{ const a=lat*Math.PI/180, b=lon*Math.PI/180; return new THREE.Vector3(Math.cos(a)*Math.cos(b),Math.sin(a),-Math.cos(a)*Math.sin(b)); };
+  const pickables=[globe], items={}, lbls=[];
+  const pinGeo=new THREE.CylinderGeometry(.025,.025,.42,6); pinGeo.translate(0,.21,0);
+  const addPin=(o,lat,lon,color,isHome)=>{ const d=dirOf(lat,lon); const g=new THREE.Group(); g.position.copy(d.clone().multiplyScalar(R)); g.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),d); spin.add(g);
+    const stem=new THREE.Mesh(pinGeo,new THREE.MeshBasicMaterial({color})); g.add(stem);
+    const head=new THREE.Mesh(new THREE.SphereGeometry(isHome?.1:.12,12,8),new THREE.MeshBasicMaterial({color})); head.position.y=.44; g.add(head);
+    const glow=glowSprite(color,.9,.85); glow.position.y=.44; g.add(glow);
+    const anchor=new THREE.Object3D(); anchor.position.y=.56; g.add(anchor);
+    if(o){ const hs=hitSphere(.38,o.id); hs.position.y=.3; g.add(hs); pickables.push(hs); items[o.id]={g,d,o,lat,lon}; }
+    return {anchor,d}; };
+  OBS.filter(o=>o.type==='ground').forEach(o=>{ const p=addPin(o,o.lat,o.lon,o.color); const b=st.addLabel(()=>L(o.short),p.anchor,()=>openInfo('observatories',o.id),o.id); lbls.push({b,d:p.d}); });
+  addPin(null,MADINAH[0],MADINAH[1],'#ffc65c',true);
+  // space telescopes (not to scale)
+  const sats={};
+  const mkSat=(id,color,build)=>{ const g=new THREE.Group(); build(g); const glow=glowSprite(color,1.1,.75); g.add(glow); const hs=hitSphere(.5,id); g.add(hs); pickables.push(hs); root.add(g);
+    const anchor=new THREE.Object3D(); anchor.position.y=.38; g.add(anchor); const o=OBS_BY[id]; const b=st.addLabel(()=>L(o.short),anchor,()=>openInfo('observatories',id),id); items[id]={g,o,space:true}; lbls.push({b,space:true}); sats[id]=g; return g; };
+  const metal=new THREE.MeshPhongMaterial({color:0xd8dce8,shininess:60}), panelM=new THREE.MeshPhongMaterial({color:0x2a4fa8,emissive:0x0a1430,side:THREE.DoubleSide}), gold=new THREE.MeshPhongMaterial({color:0xffc65c,emissive:0x4a3000,shininess:80,side:THREE.DoubleSide});
+  mkSat('hubble','#d9c8ff',g=>{ const b=new THREE.Mesh(new THREE.CylinderGeometry(.09,.09,.36,12),metal); b.rotation.z=Math.PI/2; g.add(b); [-1,1].forEach(s=>{ const p=new THREE.Mesh(new THREE.PlaneGeometry(.1,.42),panelM); p.position.set(0,0,s*.2); p.rotation.x=Math.PI/2; g.add(p); }); });
+  mkSat('chandra','#62d0ff',g=>{ const b=new THREE.Mesh(new THREE.CylinderGeometry(.07,.1,.5,10),metal); b.rotation.z=Math.PI/2; g.add(b); [-1,1].forEach(s=>{ const p=new THREE.Mesh(new THREE.PlaneGeometry(.08,.3),panelM); p.position.set(.12,0,s*.16); p.rotation.x=Math.PI/2; g.add(p); }); });
+  mkSat('jwst','#ffc65c',g=>{ const m=new THREE.Mesh(new THREE.CircleGeometry(.2,6),gold); m.rotation.y=Math.PI/2; g.add(m); const sh=new THREE.Mesh(new THREE.PlaneGeometry(.62,.36),new THREE.MeshPhongMaterial({color:0xc9b8ff,emissive:0x2a2050,side:THREE.DoubleSide})); sh.position.x=-.16; sh.rotation.y=Math.PI/2; sh.rotation.x=.25; g.add(sh); });
+  const hubIncl=28.5*Math.PI/180, hubR=R*1.22, chaA=R*1.9, chaE=.55, jwPos=new THREE.Vector3(-R*2.9,R*.35,R*.4);
+  const ring=(pts,color,op,dash)=>{ const geo=new THREE.BufferGeometry().setFromPoints(pts); const m=dash?new THREE.LineDashedMaterial({color,transparent:true,opacity:op,dashSize:.18,gapSize:.14}):new THREE.LineBasicMaterial({color,transparent:true,opacity:op}); const l=new THREE.Line(geo,m); if(dash) l.computeLineDistances(); root.add(l); return l; };
+  const hubAt=a=>new THREE.Vector3(Math.cos(a)*hubR,Math.sin(a)*Math.sin(hubIncl)*hubR,Math.sin(a)*Math.cos(hubIncl)*hubR);
+  const chaAt=a=>{ const r=chaA*(1-chaE*chaE)/(1+chaE*Math.cos(a)); return new THREE.Vector3(Math.cos(a)*r,Math.sin(a)*r*.52,Math.sin(a)*r*.85); };
+  ring(Array.from({length:121},(_,i)=>hubAt(i/120*Math.PI*2)),0xd9c8ff,.3); ring(Array.from({length:161},(_,i)=>chaAt(i/160*Math.PI*2)),0x62d0ff,.25);
+  ring([new THREE.Vector3(0,0,0).add(jwPos.clone().setLength(R*1.05)),jwPos.clone()],0xffc65c,.45,true); sats.jwst.position.copy(jwPos);
+  let ha=.6, ca=2.2, focused=null, rotTarget=null;
+  spin.rotation.y=(-MADINAH[1]-90)*Math.PI/180; // start with Saudi Arabia facing the viewer
+  const camDir=new THREE.Vector3(), wp=new THREE.Vector3(), nrm=new THREE.Vector3();
+  const homeFn=(a)=>{ const d=Math.max(15,Math.min(30,12.5/Math.min(1,Math.max(a,.45)))); const la=18*Math.PI/180; return {pos:[0,d*Math.sin(la),d*Math.cos(la)]}; };
+  return {
+    aria:B('كرة أرضية ثلاثية الأبعاد عليها مواقع المراصد، وحولها تلسكوبات فضائية','3D globe showing observatory locations, with space telescopes around it'),
+    pickables, onPick:id=>{ if(id) openInfo('observatories',id); }, minD:6.5, maxD:40, home:homeFn,
+    focus(id){ const it=items[id]; if(!it) return; focused=id;
+      if(it.space){ it.g.getWorldPosition(wp); const d=wp.length(); const dir=wp.clone().normalize(); const side=new THREE.Vector3(0,1,0).cross(dir).normalize().multiplyScalar(lang==='ar'?2.2:-2.2); st.setLimits(2,40); st.tweenTo(wp.clone().add(dir.multiplyScalar(3.2)).add(side).add(new THREE.Vector3(0,1,0)),wp.clone()); return; }
+      rotTarget=(-it.lon-90)*Math.PI/180; const la=it.lat*Math.PI/180, d=11.5; st.setLimits(6.5,40); st.tweenTo(new THREE.Vector3(0,d*Math.sin(la),d*Math.cos(la)),new THREE.Vector3()); },
+    unfocus(){ focused=null; rotTarget=null; st.setLimits(6.5,40); st.goHome(false); },
+    update(dt,moving){
+      if(rotTarget!=null){ let df=rotTarget-spin.rotation.y; df=Math.atan2(Math.sin(df),Math.cos(df)); spin.rotation.y+=df*Math.min(1,dt*3.2); if(Math.abs(df)<.002) spin.rotation.y=rotTarget; }
+      else if(moving&&!focused) spin.rotation.y+=dt*.05;
+      if(moving&&!(focused&&items[focused]&&items[focused].space)){ ha+=dt*.35; ca+=dt*.12*(1.6/(1+chaE*Math.cos(ca))**1.2); }
+      sats.hubble.position.copy(hubAt(ha)); sats.chandra.position.copy(chaAt(ca)); sats.hubble.rotation.y+=dt*.2; sats.jwst.rotation.y=Math.sin(st.t*.3)*.3;
+      st.camera.getWorldDirection(camDir);
+      lbls.forEach(l=>{ const it=st.items.find(i=>i.el===l.b); if(!it) return; if(l.space){ it.hide=false; return; } nrm.copy(l.d).applyQuaternion(spin.quaternion); it.hide=nrm.dot(camDir)>-0.12; });
+    } };
+}
+function snapGlobe(st){ const v=buildGlobe(st); v.update(0,false); return {pos:[0,5.2,15.5]}; }
+
+function renderObsInfo(info,P,closeB){
+  const o=OBS_BY[P.id]; const space=o.type==='space';
+  const tag=o.build?t('tagBuild'):space?t('tagSpace'):t('tagGround');
+  const bandChips=el('div',{class:'bandrow'},o.bands.map(b=>el('span',{class:'bchip',style:'--c:'+BAND_BY[b].c},[el('i'),L(BAND_BY[b].name)])));
+  const nodes=[ statTiles([{v:o.where,k:B('الموقع','Location'),txt:true},{v:o.alt,k:UI[o.altK||'height'],txt:true},{v:o.size,k:UI.size,txt:true},{v:o.since,k:UI.since,txt:true}]),
+    el('div',{class:'lightrow'},[el('span',{class:'label',text:t('light')}),bandChips]),
+    el('p',{class:'lead',text:L(o.desc)}),
+    el('div',{class:'why'},[el('b',{text:t(o.whyK||'whyHere')}),el('p',{text:L(o.why)})]),
+    el('div',{class:'why hl'},[el('b',{text:t('highlight')}),el('p',{text:L(o.high)})]),
+    el('div',{class:'row links'},[extLink(o.site,t(o.siteK||'site')+' · '+o.sn), o.cam?extLink(o.cam,t('liveCam')):null].filter(Boolean)),
+    o.approx?el('p',{class:'note',text:t('approxPin')}):null ].filter(Boolean);
+  info.replaceChildren(head(tag,L(o.name),closeB), ...nodes);
+}
+let specSel='xray';
+function obsActs(){
+  const bar=el('div',{class:'specbar',role:'group','aria-label':t('specTitle')});
+  const out=el('div',{class:'specout'});
+  const paint=()=>{ const b=BAND_BY[specSel]; bar.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.b===specSel)));
+    const who=OBS.filter(o=>o.bands.includes(b.id));
+    const gIcon={yes:'✓',part:'◐',no:'✕'}[b.ground];
+    out.replaceChildren( el('h4',{style:'color:'+b.c,text:L(b.name)}), el('p',{class:'note',text:L(b.wl)}),
+      el('div',{class:'why'},[el('b',{text:t('reveals')}),el('p',{text:L(b.rev)})]),
+      el('div',{class:'why g-'+b.ground},[el('b',{text:t('reachGround')}),el('p',{},[el('span',{class:'gi2','aria-hidden':'true',text:gIcon+' '}),L(b.gtxt)])]),
+      el('span',{class:'label',text:t('whoSees')}),
+      who.length?el('div',{class:'strip',style:'margin:0;padding-inline:0;flex-wrap:wrap'},who.map(o=>{ const c=el('button',{class:'chip',type:'button',style:'--c:'+o.color},[el('i'),L(o.name)]); c.addEventListener('click',()=>{ openInfo('observatories',o.id); if(!isPhone()||isShort()) scrollStage('observatories'); }); return c; })):el('p',{class:'note',text:t('noneListed')}) ); };
+  BANDS.forEach(b=>{ const btn=el('button',{type:'button','data-b':b.id,style:'--c:'+b.c},[el('i'),el('span',{text:L(b.name)})]); btn.addEventListener('click',()=>{ specSel=b.id; paint(); }); bar.append(btn); });
+  paint();
+  const spec=el('article',{class:'card wide'},[el('h3',{text:t('specTitle')}),el('p',{text:t('specLine')}),bar,out,srcLine('https://science.nasa.gov/ems/','NASA — Electromagnetic Spectrum')]);
+  const why=el('article',{class:'card'},[el('h3',{text:t('highDry')}),el('ul',{class:'facts'},['hd1','hd2','hd3','hd4','hd5'].map(k=>el('li',{text:t(k)}))),srcLine('https://www.eso.org/public/teles-instr/paranal-observatory/','ESO — Paranal')]);
+  const mq=el('article',{class:'card'},[el('h3',{text:t('missionQ')}),quizBox(SPEC_QUIZ,2,()=>complete('spectrum'))]);
+  return el('div',{class:'acts'},[spec,why,mq]);
+}
+
+/* ================= TONIGHT'S SKY ================= */
+/* ---- astronomy: low-precision positions (JPL approximate Keplerian elements; Schlyter's Moon). Good to a few arcminutes for 1800–2050. ---- */
+const Astro=(()=>{
+  const D2R=Math.PI/180, R2D=180/Math.PI, n360=x=>((x%360)+360)%360;
+  const sind=x=>Math.sin(x*D2R), cosd=x=>Math.cos(x*D2R);
+  const jd=(date)=>date.getTime()/86400000+2440587.5;
+  // a, e, I, L, varpi, Omega  + rates per Julian century (Standish, JPL)
+  const EL={
+    mercury:[0.38709927,0.20563593,7.00497902,252.25032350,77.45779628,48.33076593, 0.00000037,0.00001906,-0.00594749,149472.67411175,0.16047689,-0.12534081],
+    venus:[0.72333566,0.00677672,3.39467605,181.97909950,131.60246718,76.67984255, 0.00000390,-0.00004107,-0.00078890,58517.81538729,0.00268329,-0.27769418],
+    earth:[1.00000261,0.01671123,-0.00001531,100.46457166,102.93768193,0, 0.00000562,-0.00004392,-0.01294668,35999.37244981,0.32327364,0],
+    mars:[1.52371034,0.09339410,1.84969142,-4.55343205,-23.94362959,49.55953891, 0.00001847,0.00007882,-0.00813131,19140.30268499,0.44441088,-0.29257343],
+    jupiter:[5.20288700,0.04838624,1.30439695,34.39644051,14.72847983,100.47390909, -0.00011607,-0.00013253,-0.00183714,3034.74612775,0.21252668,0.20469106],
+    saturn:[9.53667594,0.05386179,2.48599187,49.95424423,92.59887831,113.66242448, -0.00125060,-0.00050991,0.00193609,1222.49362201,-0.41897216,-0.28867794],
+    uranus:[19.18916464,0.04725744,0.77263783,313.23810451,170.95427630,74.01692503, -0.00196176,-0.00004397,-0.00242939,428.48202785,0.40805281,0.04240589],
+    neptune:[30.06992276,0.00859048,1.77004347,-55.12002969,44.96476227,131.78422574, 0.00026291,0.00005105,0.00035372,218.45945325,-0.32241464,-0.00508664],
+  };
+  function kepler(M,e){ M=n360(M+180)-180; let E=M+R2D*e*sind(M); for(let i=0;i<8;i++){ const dE=(M-(E-R2D*e*sind(E)))/(1-e*cosd(E)); E+=dE; if(Math.abs(dE)<1e-7) break; } return E; }
+  function helio(id,T){ const q=EL[id]; const a=q[0]+q[6]*T, e=q[1]+q[7]*T, I=q[2]+q[8]*T, Lm=q[3]+q[9]*T, wb=q[4]+q[10]*T, Om=q[5]+q[11]*T;
+    const w=wb-Om, M=Lm-wb, E=kepler(M,e); const xp=a*(cosd(E)-e), yp=a*Math.sqrt(1-e*e)*sind(E);
+    const cw=cosd(w),sw=sind(w),cO=cosd(Om),sO=sind(Om),cI=cosd(I),sI=sind(I);
+    return [ (cw*cO-sw*sO*cI)*xp+(-sw*cO-cw*sO*cI)*yp, (cw*sO+sw*cO*cI)*xp+(-sw*sO+cw*cO*cI)*yp, (sw*sI)*xp+(cw*sI)*yp ]; }
+  const obl=T=>23.43928-0.0130042*T;
+  function eclToEq(lon,lat,T){ const e=obl(T); const x=cosd(lat)*cosd(lon), y=cosd(lat)*sind(lon), z=sind(lat);
+    const ye=y*cosd(e)-z*sind(e), ze=y*sind(e)+z*cosd(e); return { ra:n360(Math.atan2(ye,x)*R2D), dec:Math.asin(Math.max(-1,Math.min(1,ze)))*R2D }; }
+  // geocentric ecliptic longitude/latitude of date (precession added as 1.3970 deg/century)
+  function planetEcl(id,date){ const T=(jd(date)-2451545)/36525; const p=helio(id,T), E=helio('earth',T);
+    const x=p[0]-E[0], y=p[1]-E[1], z=p[2]-E[2], r=Math.hypot(x,y,z);
+    // light time is ignored (< 0.01 deg for these purposes)
+    return { lon:n360(Math.atan2(y,x)*R2D+1.3970*T), lat:Math.asin(z/r)*R2D, dist:r, rs:Math.hypot(...p), re:Math.hypot(...E) }; }
+  function sunEcl(date){ const T=(jd(date)-2451545)/36525; const E=helio('earth',T); return { lon:n360(Math.atan2(-E[1],-E[0])*R2D+1.3970*T), lat:0, dist:Math.hypot(...E) }; }
+  function moonEcl(date){ const d=jd(date)-2451543.5;
+    const N=125.1228-0.0529538083*d, i=5.1454, w=318.0634+0.1643573223*d, a=60.2666, e=0.0549, M=n360(115.3654+13.0649929509*d);
+    const E=kepler(M,e); const xv=a*(cosd(E)-e), yv=a*Math.sqrt(1-e*e)*sind(E); const v=Math.atan2(yv,xv)*R2D, r0=Math.hypot(xv,yv);
+    const xh=r0*(cosd(N)*cosd(v+w)-sind(N)*sind(v+w)*cosd(i)), yh=r0*(sind(N)*cosd(v+w)+cosd(N)*sind(v+w)*cosd(i)), zh=r0*sind(v+w)*sind(i);
+    let lon=Math.atan2(yh,xh)*R2D, lat=Math.atan2(zh,Math.hypot(xh,yh))*R2D;
+    const Ms=n360(356.0470+0.9856002585*d), ws=282.9404+4.70935e-5*d, Ls=Ms+ws, Lm=M+w+N, Dm=Lm-Ls, F=Lm-N;
+    lon+= -1.274*sind(M-2*Dm)+0.658*sind(2*Dm)-0.186*sind(Ms)-0.059*sind(2*M-2*Dm)-0.057*sind(M-2*Dm+Ms)+0.053*sind(M+2*Dm)+0.046*sind(2*Dm-Ms)+0.041*sind(M-Ms)-0.035*sind(Dm)-0.031*sind(M+Ms)-0.015*sind(2*F-2*Dm)+0.011*sind(M-4*Dm);
+    lat+= -0.173*sind(F-2*Dm)-0.055*sind(M-F-2*Dm)-0.046*sind(M+F-2*Dm)+0.033*sind(F+2*Dm)+0.017*sind(2*M+F);
+    const r=r0-0.58*cosd(M-2*Dm)-0.46*cosd(2*Dm);
+    return { lon:n360(lon), lat, distER:r }; }
+  function gmst(date){ return n360(280.46061837+360.98564736629*(jd(date)-2451545)); }
+  function altaz(ra,dec,date,latd,lond){ const H=n360(gmst(date)+lond-ra);
+    const sa=sind(latd)*sind(dec)+cosd(latd)*cosd(dec)*cosd(H); const alt=Math.asin(sa)*R2D;
+    const az=Math.atan2(-cosd(dec)*sind(H), cosd(latd)*sind(dec)-sind(latd)*cosd(dec)*cosd(H))*R2D; return { alt, az:n360(az) }; }
+  // Bennett refraction for apparent altitude
+  const refr=(h)=>h<-1.5?0:1.02/Math.tan((h+10.3/(h+5.11))*D2R)/60;
+  function body(id,date,latd,lond){ const T=(jd(date)-2451545)/36525; let ecl, par=0, distKm;
+    if(id==='sun') ecl=sunEcl(date); else if(id==='moon'){ ecl=moonEcl(date); par=Math.asin(1/ecl.distER)*R2D; distKm=ecl.distER*6378.14; } else ecl=planetEcl(id,date);
+    const eq=eclToEq(ecl.lon,ecl.lat,T); const h=altaz(eq.ra,eq.dec,date,latd,lond);
+    let alt=h.alt-par*cosd(h.alt); alt+=refr(alt);
+    return { id, ra:eq.ra, dec:eq.dec, alt, az:h.az, lon:ecl.lon, lat:ecl.lat, dist:ecl.dist, distKm }; }
+  function star(raJ2000,decJ2000,date,latd,lond){ const T=(jd(date)-2451545)/36525; const p=1.3970*T; // simple precession in ecliptic longitude
+    const e0=23.43928, x=cosd(decJ2000)*cosd(raJ2000), y=cosd(decJ2000)*sind(raJ2000), z=sind(decJ2000);
+    const yl=y*cosd(e0)+z*sind(e0), zl=-y*sind(e0)+z*cosd(e0); const lon=Math.atan2(yl,x)*R2D+p, lat=Math.asin(zl)*R2D;
+    const eq=eclToEq(lon,lat,T); const h=altaz(eq.ra,eq.dec,date,latd,lond); return { alt:h.alt+refr(h.alt), az:h.az }; }
+  function moonPhase(date){ const s=sunEcl(date), m=moonEcl(date); const el=Math.acos(cosd(m.lat)*cosd(m.lon-s.lon))*R2D;
+    const k=(1-cosd(el))/2; // illuminated fraction, phase angle ~ 180 - elongation
+    const waxing=n360(m.lon-s.lon)<180; return { frac:k, elong:el, waxing, angle:n360(m.lon-s.lon) }; }
+  // altitude threshold crossings within [t0,t1]; step in minutes
+  function crossings(id,t0,t1,latd,lond,h0,stepMin){ const out=[]; const st=(stepMin||10)*60000; let prev=body(id,new Date(t0),latd,lond).alt-h0;
+    for(let t=t0+st;t<=t1;t+=st){ const cur=body(id,new Date(t),latd,lond).alt-h0; if(prev<0!==cur<0){ let a=t-st,b=t,fa=prev; for(let k=0;k<20;k++){ const m=(a+b)/2, fm=body(id,new Date(m),latd,lond).alt-h0; if((fa<0)===(fm<0)){ a=m; fa=fm; } else b=m; } out.push({t:new Date((a+b)/2),rise:prev<0}); } prev=cur; }
+    return out; }
+  return { body, star, moonPhase, crossings, altaz, jd, gmst };
+})();
+
+
+const CITIES=[ ['madinah',B('المدينة المنورة','Madinah'),24.47,39.61], ['makkah',B('مكة المكرمة','Makkah'),21.42,39.83], ['jeddah',B('جدة','Jeddah'),21.49,39.19], ['riyadh',B('الرياض','Riyadh'),24.71,46.68],
+  ['dammam',B('الدمام','Dammam'),26.43,50.10], ['abha',B('أبها','Abha'),18.22,42.51], ['tabuk',B('تبوك','Tabuk'),28.38,36.57], ['hail',B('حائل','Hail'),27.52,41.69], ['alula',B('العُلا','AlUla'),26.61,37.92] ];
+const SKY_STARS={"stars":[["Achernar",24.43,-57.24,0.5],["Acrux",186.65,-63.1,0.8],["Adhara",104.66,-28.97,1.5],["Agena",210.96,-60.37,0.6],["Aldebaran",68.98,16.51,0.9],["Algieba",154.99,19.84,2.0],["Algol",47.04,40.96,2.1],["Alhena",99.43,16.4,1.9],["Alioth",193.51,55.96,1.8],["Alkaid",206.89,49.31,1.9],["Almach",30.97,42.33,2.1],["Alnair",332.06,-46.96,1.7],["Alnilam",84.05,-1.2,1.7],["Alnitak",85.19,-1.94,1.7],["Alphard",141.9,-8.66,2.0],["Alphecca",233.67,26.71,2.2],["Alpheratz",2.1,29.09,2.1],["Altair",297.7,8.87,0.8],["Antares",247.35,-26.43,1.1],["Arcturus",213.92,19.18,-0.1],["Atria",252.17,-69.03,1.9],["Avior",125.63,-59.51,1.9],["Bellatrix",81.28,6.35,1.6],["Betelgeuse",88.79,7.41,0.5],["Canopus",95.99,-52.7,-0.6],["Capella",79.17,46.0,0.1],["Caph",2.29,59.15,2.3],["Castor",113.65,31.89,1.6],["Deneb",310.36,45.28,1.2],["Denebola",177.26,14.57,2.1],["Diphda",10.9,-17.99,2.0],["Dubhe",165.93,61.75,1.8],["Elnath",81.57,28.61,1.6],["Eltanin",269.15,51.49,2.2],["Fomalhaut",344.41,-29.62,1.2],["Gacrux",187.79,-57.11,1.6],["Hadar",210.96,-60.37,0.6],["Hamal",31.79,23.46,2.0],["Kaus Australis",276.04,-34.38,1.8],["Kochab",222.68,74.16,2.1],["Megrez",183.86,57.03,3.3],["Menkalinan",89.88,44.95,1.9],["Menkent",211.67,-36.37,2.1],["Merak",165.46,56.38,2.3],["Miaplacidus",138.3,-69.72,1.7],["Mimosa",191.93,-59.69,1.2],["Mintaka",83.0,-0.3,2.2],["Mirach",17.43,35.62,2.1],["Mirfak",51.08,49.86,1.8],["Mirzam",95.67,-17.96,2.0],["Mizar",200.98,54.93,2.2],["Naos",120.9,-40.0,2.2],["Nunki",283.82,-26.3,2.0],["Peacock",306.41,-56.74,1.9],["Phecda",178.46,53.69,2.4],["Polaris",37.95,89.26,2.0],["Pollux",116.33,28.03,1.2],["Procyon",114.83,5.22,0.4],["Rasalhague",263.73,12.56,2.1],["Regulus",152.09,11.97,1.4],["Rigel",78.63,-8.2,0.2],["Rigil Kentaurus",219.9,-60.83,-0.0],["Sadr",305.56,40.26,2.2],["Saiph",86.94,-9.67,2.1],["Schedar",10.13,56.54,2.2],["Shaula",263.4,-37.1,1.6],["Sirius",101.29,-16.72,-1.4],["Sirrah",2.1,29.09,2.1],["Spica",201.3,-11.16,1.0],["Suhail",137.0,-43.43,2.2],["Vega",279.23,38.78,0.0],["Wezen",107.1,-26.39,1.8]],"lines":[["Betelgeuse","Bellatrix"],["Bellatrix","Mintaka"],["Mintaka","Alnilam"],["Alnilam","Alnitak"],["Alnitak","Betelgeuse"],["Alnitak","Saiph"],["Saiph","Rigel"],["Rigel","Mintaka"],["Dubhe","Merak"],["Merak","Phecda"],["Phecda","Megrez"],["Megrez","Dubhe"],["Megrez","Alioth"],["Alioth","Mizar"],["Mizar","Alkaid"],["Vega","Deneb"],["Deneb","Altair"],["Altair","Vega"],["Castor","Pollux"]]};
+const STAR_AR={Sirius:'الشعرى اليمانية',Canopus:'سهيل',Arcturus:'السماك الرامح',Vega:'النسر الواقع',Capella:'العيوق',Rigel:'رجل الجبار',Procyon:'الشعرى الشامية',Betelgeuse:'منكب الجوزاء',Altair:'النسر الطائر',Aldebaran:'الدبران',Antares:'قلب العقرب',Spica:'السماك الأعزل',Pollux:'رأس التوأم المؤخر',Fomalhaut:'فم الحوت',Deneb:'ذنب الدجاجة',Regulus:'قلب الأسد',Polaris:'النجم القطبي',Achernar:'آخر النهر'};
+const SKY_BODIES=[ {id:'moon',name:B('القمر','Moon'),c:'#e9e6dc'}, {id:'mercury',name:BODIES.mercury.name,c:'#c8c0b6'}, {id:'venus',name:BODIES.venus.name,c:'#ffe6a8'}, {id:'mars',name:BODIES.mars.name,c:'#ff8a5c'},
+  {id:'jupiter',name:BODIES.jupiter.name,c:'#ffd9a8'}, {id:'saturn',name:BODIES.saturn.name,c:'#f2d58a'} ];
+const NAKED=['mercury','venus','mars','jupiter','saturn'];
+const sky={ city:'madinah', geo:null, off:0, sel:null, timer:null };
+function skyPlace(){ if(sky.city==='geo'&&sky.geo) return {name:B('موقعي','My location'),lat:sky.geo[0],lon:sky.geo[1],tz:undefined}; const c=CITIES.find(c=>c[0]===sky.city)||CITIES[0]; return {name:c[1],lat:c[2],lon:c[3],tz:'Asia/Riyadh'}; }
+const LOC=()=>lang==='ar'?'ar-u-nu-latn':'en-GB';
+function fTime(d,tz){ return d.toLocaleTimeString(lang==='ar'?'ar-u-nu-latn':'en-US',{hour:'numeric',minute:'2-digit',timeZone:tz}); }
+function fDate(d,tz,opt){ return d.toLocaleDateString(LOC(),Object.assign({weekday:'long',day:'numeric',month:'long',timeZone:tz},opt||{})); }
+const DIRS=[B('الشمال','north'),B('الشمال الشرقي','north-east'),B('الشرق','east'),B('الجنوب الشرقي','south-east'),B('الجنوب','south'),B('الجنوب الغربي','south-west'),B('الغرب','west'),B('الشمال الغربي','north-west')];
+const dirName=az=>L(DIRS[Math.round(az/45)%8]);
+function skyTime(){ return new Date(Date.now()+sky.off*3600000); }
+function moonPath(r,frac,waxing){ const k=Math.max(0,Math.min(1,frac)), rx=Math.abs(1-2*k)*r; const s1=waxing?1:0, s2=waxing?(k<.5?0:1):(k<.5?1:0);
+  return `M0,${-r} A${r},${r} 0 0 ${s1} 0,${r} A${rx},${r} 0 0 ${s2} 0,${-r} Z`; }
+function moonIcon(frac,waxing,r){ const s=document.createElementNS('http://www.w3.org/2000/svg','svg'); s.setAttribute('viewBox',`${-r-1} ${-r-1} ${2*r+2} ${2*r+2}`); s.setAttribute('class','moonic'); s.setAttribute('aria-hidden','true');
+  s.innerHTML=`<circle r="${r}" fill="#2a2c3f"/><path d="${moonPath(r,frac,waxing)}" fill="#f1ecdc"/>`; return s; }
+function phaseName(p){ const a=p.angle; const N=[[11.25,B('محاق','New moon')],[78.75,B('هلال متزايد','Waxing crescent')],[101.25,B('تربيع أول','First quarter')],[168.75,B('أحدب متزايد','Waxing gibbous')],[191.25,B('بدر','Full moon')],[258.75,B('أحدب متناقص','Waning gibbous')],[281.25,B('تربيع أخير','Last quarter')],[348.75,B('هلال متناقص','Waning crescent')],[361,B('محاق','New moon')]];
+  return L(N.find(n=>a<n[0])[1]); }
+/* night window containing (or following) time T: sun upper limb below the horizon */
+function nightWindow(T,pl){ const xs=Astro.crossings('sun',T.getTime()-14*3600000,T.getTime()+36*3600000,pl.lat,pl.lon,-0.267,12);
+  let set=null,rise=null; for(const c of xs){ if(!c.rise&&c.t<=T) set=c.t; }
+  const up=Astro.body('sun',T,pl.lat,pl.lon).alt>-0.267;
+  if(up||!set){ set=(xs.find(c=>!c.rise&&c.t>T)||{}).t; }
+  rise=(xs.find(c=>c.rise&&set&&c.t>set)||{}).t; return {set,rise}; }
+function planPlanet(id,win,pl){ if(!win.set||!win.rise) return null; let first=null,last=null,best=null; const step=10*60000;
+  for(let t=win.set.getTime()-40*60000;t<=win.rise.getTime()+40*60000;t+=step){ const d=new Date(t); const s=Astro.body('sun',d,pl.lat,pl.lon).alt; if(s>-4) continue;
+    const b=Astro.body(id,d,pl.lat,pl.lon); if(b.alt>(id==='moon'?2:8)){ if(!first) first=d; last=d; if(!best||b.alt>best.alt) best={alt:b.alt,az:b.az,t:d}; } }
+  return first?{first,last,best}:null; }
+const EVENTS=[
+ { d:'2026-10-21T21:00:00Z', kind:'meteor', zhr:20, name:B('زخة شهب الجباريات','Orionid meteor shower'), when:B('ليلة 21–22 أكتوبر','Night of 21–22 October'), src:'https://www.amsmeteors.org/meteor-shower-calendar/', sn:'AMS' },
+ { d:'2026-11-16T21:00:00Z', kind:'meteor', zhr:15, name:B('زخة شهب الأسديات','Leonid meteor shower'), when:B('ليلة 16–17 نوفمبر','Night of 16–17 November'), src:'https://www.amsmeteors.org/meteor-shower-calendar/', sn:'AMS' },
+ { d:'2026-12-13T21:00:00Z', kind:'meteor', zhr:150, name:B('زخة شهب التوأميات','Geminid meteor shower'), when:B('ليلة 13–14 ديسمبر','Night of 13–14 December'), src:'https://www.amsmeteors.org/meteor-shower-calendar/', sn:'AMS' },
+ { d:'2027-01-03T21:00:00Z', kind:'meteor', zhr:80, name:B('زخة شهب الربعيات','Quadrantid meteor shower'), when:B('ذروتها 4 يناير 2027','Peak 4 January 2027'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+ { d:'2027-02-20T23:14:00Z', kind:'lunar', name:B('خسوف شبه ظلي للقمر','Penumbral lunar eclipse'), when:B('ليلة 20–21 فبراير 2027، ذروته نحو 2:14 فجرًا','Night of 20–21 February 2027, greatest around 2:14 am'),
+   txt:B('يُرى من السعودية، لكن القمر يخفت قليلًا فقط ولا يغيب أي جزء منه.','Visible from Saudi Arabia, but the Moon only dims slightly; no part of it goes dark.'), src:'https://eclipse.gsfc.nasa.gov/LEdecade/LEdecade2021.html', sn:'NASA' },
+ { d:'2027-04-22T21:00:00Z', kind:'meteor', zhr:18, name:B('زخة شهب القيثاريات','Lyrid meteor shower'), when:B('ذروتها 23 أبريل 2027','Peak 23 April 2027'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+ { d:'2027-05-05T21:00:00Z', kind:'meteor', zhr:50, name:B('زخة شهب إيتا الدلويات','Eta Aquariid meteor shower'), when:B('ذروتها 6 مايو 2027 قبل الفجر','Peak 6 May 2027, before dawn'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+ { d:'2027-08-02T10:21:00Z', kind:'solar', big:true, name:B('كسوف كلي للشمس فوق السعودية','Total solar eclipse over Saudi Arabia'), when:B('الاثنين 2 أغسطس 2027، ظهرًا','Monday 2 August 2027, around midday'),
+   txt:B('يمر مسار الكسوف الكلي فوق جدة ومكة المكرمة، حيث يغيب قرص الشمس نحو 5 إلى 6 دقائق. في المدينة المنورة كسوف جزئي عميق يغطي نحو 94% من قرص الشمس، وذروته نحو الساعة 1:21 ظهرًا.','The path of totality crosses Jeddah and Makkah, where the Sun is fully covered for about 5 to 6 minutes. Madinah sees a deep partial eclipse covering about 94% of the Sun, at its greatest around 1:21 pm.'),
+   warn:B('تنبيه للسلامة: لا تُنظر إلى الشمس أبدًا دون نظارات كسوف معتمدة، حتى أثناء الكسوف الجزئي.','Safety: never look at the Sun without certified eclipse glasses, even during a partial eclipse.'),
+   src:'https://eclipse.gsfc.nasa.gov/SEpath/SEpath2001/SE2027Aug02Tpath.html', sn:'NASA' },
+ { d:'2027-08-12T21:00:00Z', kind:'meteor', zhr:110, name:B('زخة شهب البرشاويات','Perseid meteor shower'), when:B('ذروتها 13 أغسطس 2027','Peak 13 August 2027'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+ { d:'2027-10-21T21:00:00Z', kind:'meteor', zhr:20, name:B('زخة شهب الجباريات','Orionid meteor shower'), when:B('ذروتها 22 أكتوبر 2027','Peak 22 October 2027'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+ { d:'2027-11-17T21:00:00Z', kind:'meteor', zhr:15, name:B('زخة شهب الأسديات','Leonid meteor shower'), when:B('ذروتها 18 نوفمبر 2027','Peak 18 November 2027'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+ { d:'2027-12-13T21:00:00Z', kind:'meteor', zhr:150, name:B('زخة شهب التوأميات','Geminid meteor shower'), when:B('ذروتها 14 ديسمبر 2027','Peak 14 December 2027'), src:'https://www.imo.net/resources/calendar/', sn:'IMO' },
+];
+function renderSky(entering){
+  const sec=$('#scr-sky'); const pl=skyPlace(); const T=skyTime();
+  const headB=el('div',{class:'ex-head'},[ el('button',{class:'ctl',type:'button','data-go':'hub'},[icon('back'),el('span',{text:t('back')})]), el('h2',{text:t('sky')}) ]); headB.firstChild.firstChild.classList.add('flip');
+  // controls
+  const sel=el('select',{class:'sel','aria-label':t('city')}); CITIES.forEach(c=>{ const o=el('option',{value:c[0],text:L(c[1])}); if(c[0]===sky.city) o.selected=true; sel.append(o); });
+  if(sky.geo){ const o=el('option',{value:'geo',text:t('myLoc')}); if(sky.city==='geo') o.selected=true; sel.append(o); }
+  sel.addEventListener('change',()=>{ sky.city=sel.value; sky.sel=null; renderSky(false); });
+  const geoB=el('button',{class:'ctl',type:'button'},[icon('pin'),el('span',{text:t('myLoc')})]);
+  geoB.addEventListener('click',()=>{ if(!navigator.geolocation){ toast(t('locErr')); return; } navigator.geolocation.getCurrentPosition(p=>{ sky.geo=[p.coords.latitude,p.coords.longitude]; sky.city='geo'; renderSky(false); toast(t('locNote')); },()=>toast(t('locErr')),{timeout:9000,maximumAge:600000}); });
+  const range=el('input',{type:'range',min:'0',max:'24',step:'0.25',value:String(sky.off),'aria-label':t('afterH',{h:''})});
+  const tlabel=el('output',{class:'tlabel'});
+  const setT=()=>{ const d=skyTime(); tlabel.textContent=fDate(d,pl.tz,{weekday:'short'})+' · '+fTime(d,pl.tz)+(sky.off?' ('+t('afterH',{h:fmtN(sky.off,sky.off%1?1:0)})+')':' ('+t('now')+')'); };
+  range.addEventListener('input',()=>{ sky.off=parseFloat(range.value); setT(); paintChart(); });
+  range.addEventListener('change',()=>renderSky(false));
+  const nowB=el('button',{class:'ctl',type:'button',text:t('now')}); nowB.addEventListener('click',()=>{ sky.off=0; renderSky(false); });
+  const t9=el('button',{class:'ctl',type:'button',text:t('tonight9')}); t9.addEventListener('click',()=>{ const n=new Date(); const loc=new Date(n.getTime()+3*3600000); let h=21-(loc.getUTCHours()+loc.getUTCMinutes()/60+loc.getUTCSeconds()/3600); if(h<0) h+=24; sky.off=h; renderSky(false); });
+  const ctrls=el('div',{class:'skyctl card'},[ el('div',{class:'row'},[el('label',{class:'label',text:t('city')}),sel,geoB]), el('div',{class:'row'},[nowB,t9,tlabel]), range ]);
+  // chart
+  const chartBox=el('div',{class:'skychart'}); const detail=el('div',{class:'skydet'});
+  function paintChart(){ const d=skyTime(); chartBox.replaceChildren(buildChart(d,pl,detail)); }
+  // lists
+  const sun=Astro.body('sun',T,pl.lat,pl.lon); const ph=Astro.moonPhase(T); const moon=Astro.body('moon',T,pl.lat,pl.lon);
+  const dayStart=new Date(T.getTime()-((T.getUTCHours()+3)%24)*3600000-T.getUTCMinutes()*60000); // local midnight (UTC+3)
+  const sx=Astro.crossings('sun',dayStart.getTime(),dayStart.getTime()+86400000,pl.lat,pl.lon,-0.267,10), mx=Astro.crossings('moon',dayStart.getTime(),dayStart.getTime()+86400000,pl.lat,pl.lon,-0.26,10);
+  const tOf=(xs,rise)=>{ const c=xs.find(c=>c.rise===rise); return c?fTime(c.t,pl.tz):'—'; };
+  const sunCard=el('article',{class:'card mini2'},[ el('h3',{text:t('sunTimes')}), el('div',{class:'kv'},[el('span',{text:t('sunrise')}),el('b',{text:tOf(sx,true)}),el('span',{text:t('sunset')}),el('b',{text:tOf(sx,false)})]),
+    el('p',{class:'note',text:sun.alt>0?t('dayNow'):sun.alt>-12?t('twilightNow'):''}) ]);
+  const moonCard=el('article',{class:'card mini2'},[ el('div',{class:'mrow'},[moonIcon(ph.frac,ph.waxing,26),el('div',{},[el('h3',{text:t('moonTitle')}),el('p',{text:phaseName(ph)})])]),
+    el('div',{class:'kv'},[el('span',{text:t('illum')}),el('b',{text:fmtN(ph.frac*100)+'%'}),el('span',{text:t('moonrise')}),el('b',{text:tOf(mx,true)}),el('span',{text:t('moonset')}),el('b',{text:tOf(mx,false)})]) ]);
+  // tonight plan
+  const win=nightWindow(T,pl); const plan=el('ul',{class:'plan'});
+  ['moon',...NAKED].forEach(id=>{ const sb=SKY_BODIES.find(b=>b.id===id); const r=planPlanet(id,win,pl); let txt;
+    if(r){ txt=t('seenFrom',{a:fTime(r.first,pl.tz),b:fTime(r.last,pl.tz)})+'. '+t('best',{h:Math.round(r.best.alt),d:dirName(r.best.az),t:fTime(r.best.t,pl.tz)})+'.'; if(id==='mercury') txt+=' '+t('hardMercury')+'.'; }
+    else { const el2=Math.acos(Math.cos((Astro.body(id,T,0,0).lon-Astro.body('sun',T,0,0).lon)*Math.PI/180))*180/Math.PI; txt=t('notTonight')+(id!=='moon'&&el2<20?' — '+t('nearSun'):'')+'.'; }
+    const li=el('li',{class:r?'on':'off'},[el('button',{type:'button',class:'pbody','aria-pressed':String(sky.sel===id)},[el('i',{style:'--c:'+sb.c}),el('b',{text:L(sb.name)})]),el('span',{text:txt})]);
+    li.querySelector('button').addEventListener('click',()=>{ sky.sel=id; if(id!=='moon'&&r) complete('skyplanet'); paintChart(); plan.querySelectorAll('.pbody').forEach(b=>b.setAttribute('aria-pressed',String(b===li.firstChild))); chartBox.scrollIntoView({behavior:calm?'auto':'smooth',block:'nearest'}); });
+    plan.append(li); });
+  const winTxt=win.set&&win.rise?`${t('sunset')} ${fTime(win.set,pl.tz)} → ${t('sunrise')} ${fTime(win.rise,pl.tz)}`:'';
+  const planCard=el('article',{class:'card'},[el('h3',{text:t('nightPlan')}),el('p',{class:'note',text:t('nightPlanLine')+' '+winTxt}),plan,el('p',{class:'tip',text:t('fist')}),el('p',{class:'note',text:t('findPlanet')})]);
+  // events
+  const now=Date.now(); const evs=EVENTS.filter(e=>new Date(e.d).getTime()>now-36*3600000).slice(0,6);
+  const evList=el('div',{class:'evlist'},evs.map(e=>{ const dd=new Date(e.d); const days=Math.ceil((dd.getTime()-now)/86400000);
+    const when=days<=0?t('today'):days===1?t('tomorrow'):t('inDays',{n:days});
+    const kids=[ el('div',{class:'evh'},[el('span',{class:'evk ev-'+e.kind,'aria-hidden':'true'}),el('div',{},[el('b',{text:L(e.name)}),el('small',{text:L(e.when)+' · '+when})])]) ];
+    if(e.kind==='meteor'){ const p=Astro.moonPhase(dd).frac*100; const k=p<35?'moonGood':p<70?'moonFair':'moonBad'; kids.push(el('p',{class:'note',text:t('zhr',{n:e.zhr})}),el('p',{class:'mq '+k},[moonIcon(Astro.moonPhase(dd).frac,Astro.moonPhase(dd).waxing,8),el('span',{text:t(k,{p:Math.round(p)})})])); }
+    if(e.txt) kids.push(el('p',{text:L(e.txt)})); if(e.warn) kids.push(el('p',{class:'warn',text:L(e.warn)}));
+    kids.push(el('p',{class:'src'},[t('source')+': ',el('a',{href:e.src,target:'_blank',rel:'noopener',text:e.sn})]));
+    return el('div',{class:'ev'+(e.big?' big':'')},kids); }));
+  const evCard=el('article',{class:'card wide'},[el('h3',{text:t('events')}),el('p',{class:'note',text:t('eventsLine')}),evList,el('p',{class:'note',text:t('cityLight')})]);
+  const chartCard=el('article',{class:'card chartcard'},[el('div',{class:'ch-head'},[el('h3',{text:t('skyChart')+' · '+L(pl.name)})]),chartBox,detail,el('p',{class:'note',text:t('skyHow')})]);
+  sec.replaceChildren(headB, ctrls, el('div',{class:'skygrid'},[chartCard,el('div',{class:'skyside'},[sunCard,moonCard,planCard])]), evCard,
+    el('p',{class:'stage-note'},[t('calcNote')+' ',el('a',{href:'https://ssd.jpl.nasa.gov/planets/approx_pos.html',target:'_blank',rel:'noopener',text:'JPL'})]));
+  setT(); paintChart();
+  clearInterval(sky.timer); sky.timer=setInterval(()=>{ if(current==='sky'&&!document.hidden&&sky.off===0) paintChart(); },60000);
+}
+function buildChart(d,pl,detail){
+  const NS='http://www.w3.org/2000/svg', R=180; const svg=document.createElementNS(NS,'svg'); svg.setAttribute('viewBox','-232 -226 464 452'); svg.setAttribute('class','sky-svg'); svg.setAttribute('role','img'); svg.setAttribute('aria-label',t('skyChart'));
+  const mk=(tag,attrs,parent)=>{ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); (parent||svg).append(e); return e; };
+  const sun=Astro.body('sun',d,pl.lat,pl.lon); const sa=sun.alt;
+  const bg=sa>0?'#2c63a8':sa>-6?'#1d3270':sa>-12?'#121c4a':'#070a20';
+  const defs=mk('defs',{}); const gr=mk('radialGradient',{id:'skg'},defs); mk('stop',{offset:'0%','stop-color':bg},gr); mk('stop',{offset:'100%','stop-color':sa>0?'#5b8fd0':'#0b1236'},gr);
+  mk('circle',{r:R,fill:'url(#skg)',stroke:'rgba(150,160,255,.5)','stroke-width':'1.5'});
+  [30,60].forEach(a=>mk('circle',{r:R*(90-a)/90,fill:'none',stroke:'rgba(200,210,255,.14)','stroke-dasharray':'3 5'}));
+  mk('line',{x1:-R,y1:0,x2:R,y2:0,stroke:'rgba(200,210,255,.08)'}); mk('line',{x1:0,y1:-R,x2:0,y2:R,stroke:'rgba(200,210,255,.08)'});
+  const P=(alt,az)=>{ const r=R*(90-alt)/90, a=az*Math.PI/180; return [-r*Math.sin(a),-r*Math.cos(a)]; };
+  const card=[[0,B('شمال','N')],[90,B('شرق','E')],[180,B('جنوب','S')],[270,B('غرب','W')]];
+  card.forEach(([az,n])=>{ const [x,y]=P(-11,az); const tx=mk('text',{x,y:y+5,'text-anchor':'middle',class:'card-lbl'}); tx.textContent=L(n); });
+  const starOp=sa<-12?1:sa<-6?.65:sa<0?.3:0;
+  if(starOp>0){ const pos={}; SKY_STARS.stars.forEach(([n,ra,dec,mag])=>{ const h=Astro.star(ra,dec,d,pl.lat,pl.lon); pos[n]=h; });
+    SKY_STARS.lines.forEach(([a,b])=>{ const A=pos[a],Bq=pos[b]; if(!A||!Bq||A.alt<0||Bq.alt<0) return; const [x1,y1]=P(A.alt,A.az),[x2,y2]=P(Bq.alt,Bq.az); mk('line',{x1,y1,x2,y2,stroke:'rgba(140,190,255,'+(.35*starOp)+')','stroke-width':'1'}); });
+    SKY_STARS.stars.forEach(([n,ra,dec,mag])=>{ const h=pos[n]; if(h.alt<0) return; const [x,y]=P(h.alt,h.az); const r=Math.max(.8,3.4-mag*.95);
+      mk('circle',{cx:x,cy:y,r,fill:'#fff','fill-opacity':String(starOp*(mag<1.5?1:.75))});
+      if(mag<0.9||n==='Polaris'){ const tx=mk('text',{x:x+(r+3),y:y+4,class:'star-lbl','fill-opacity':String(starOp)}); tx.textContent=lang==='ar'?(STAR_AR[n]||n):n; } }); }
+  // sun & moon & planets
+  const bodies=[];
+  if(sa>-1){ const [x,y]=P(sa,sun.az); mk('circle',{cx:x,cy:y,r:14,fill:'#ffd54d',opacity:'.25'}); mk('circle',{cx:x,cy:y,r:9,fill:'#ffe27a'}); const tx=mk('text',{x,y:y-15,'text-anchor':'middle',class:'pl-lbl'}); tx.textContent=t('whereSun'); bodies.push({id:'sun',alt:sa,az:sun.az}); }
+  SKY_BODIES.forEach(b=>{ const p=Astro.body(b.id,d,pl.lat,pl.lon); bodies.push({id:b.id,alt:p.alt,az:p.az}); if(p.alt<-0.5) return; const [x,y]=P(Math.max(0,p.alt),p.az); const g=mk('g',{class:'pl'+(sky.sel===b.id?' sel':''),transform:`translate(${x},${y})`,tabindex:'0',role:'button','aria-label':L(b.name)});
+    if(b.id==='moon'){ const ph=Astro.moonPhase(d); mk('circle',{r:10,fill:'#2a2c3f',stroke:'rgba(255,255,255,.3)'},g); mk('path',{d:moonPath(10,ph.frac,ph.waxing),fill:'#f1ecdc'},g); }
+    else { mk('circle',{r:9,fill:b.c,opacity:'.22'},g); mk('circle',{r:4.6,fill:b.c},g); }
+    if(sky.sel===b.id) mk('circle',{r:16,fill:'none',stroke:'#62d0ff','stroke-width':'2'},g);
+    const tx=mk('text',{x:0,y:-14,'text-anchor':'middle',class:'pl-lbl'},g); tx.textContent=L(b.name);
+    const pick=()=>{ sky.sel=b.id; if(b.id!=='moon') complete('skyplanet'); renderSky(false); };
+    g.addEventListener('click',pick); g.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); } }); });
+  // detail line for the selected body
+  const s=bodies.find(b=>b.id===sky.sel)||null; detail.replaceChildren();
+  if(s){ const sb=SKY_BODIES.find(b=>b.id===s.id); const nm=sb?L(sb.name):t('whereSun');
+    detail.append(el('b',{text:nm}), el('span',{text:s.alt>0?`${t('altLabel')}: ${Math.round(s.alt)}° · ${t('dirLabel')}: ${dirName(s.az)}`:t('belowH')})); }
+  return svg;
+}
+
+/* ================= LIVE FROM SPACE ================= */
+const live={ timer:null, pred:null, predAt:0, past:[], last:null, fail:false, apod:null, apodFail:false, cv:null };
+function renderLive(entering){
+  const sec=$('#scr-live');
+  const headB=el('div',{class:'ex-head'},[ el('button',{class:'ctl',type:'button','data-go':'hub'},[icon('back'),el('span',{text:t('back')})]), el('h2',{text:t('live')}) ]); headB.firstChild.firstChild.classList.add('flip');
+  const cv=el('canvas',{class:'issmap',width:'1440',height:'720','aria-label':t('issTitle'),role:'img'}); live.cv=cv;
+  const stats=el('div',{class:'stats issstats',id:'iss-stats'}); const msg=el('div',{class:'issmsg',id:'iss-msg'});
+  const legend=el('div',{class:'legend'},[el('span',{},[el('i',{class:'lg-past'}),t('pastTrack')]),el('span',{},[el('i',{class:'lg-next'}),t('nextTrack')]),el('span',{},[el('i',{class:'lg-home'}),t('youHere')])]);
+  const iss=el('article',{class:'card wide'},[el('h3',{text:t('issTitle')}),el('p',{class:'note',text:t('issLine')}),el('div',{class:'mapwrap'},[cv]),legend,stats,msg,el('p',{text:t('issFacts')}),
+    el('div',{class:'row links'},[extLink('https://spotthestation.nasa.gov/',t('spot')),extLink('https://www.nasa.gov/live/',t('nasaLive'))]), srcLine('https://wheretheiss.at/w/developer','Where the ISS at? API')]);
+  const apod=el('article',{class:'card apod',id:'apod-card'},[el('h3',{text:t('apodTitle')}),el('div',{id:'apod-body'},[el('p',{class:'note',text:'…'})])]);
+  const cams=el('article',{class:'card'},[el('h3',{text:t('camsTitle')}),el('p',{class:'note',text:t('camsLine')}),el('div',{class:'camlist'},[
+    ['https://www.eso.org/public/outreach/webcams/',B('مراصد ESO في تشيلي: بارانال وأرمازونس وألما','ESO observatories in Chile: Paranal, Armazones and ALMA')],
+    ['https://www.almaobservatory.org/en/live-from-chajnantor/',B('ألما: البث من هضبة تشاجنانتور','ALMA: live from the Chajnantor Plateau')],
+    ['https://www.gtc.iac.es/multimedia/webcams.php',B('تلسكوب الكناري الكبير، لا بالما','Gran Telescopio Canarias, La Palma')],
+    ['https://mkwc.ifa.hawaii.edu/current/cams/',B('قمة ماونا كيا، هاواي','Maunakea summit, Hawaiʻi')],
+    ['https://www.nasa.gov/live/',B('بث ناسا المباشر، ومنه مناظر الأرض من محطة الفضاء','NASA live, including Earth views from the space station')] ].map(([u,n])=>extLink(u,L(n),'camlink')))]);
+  const sa=el('article',{class:'card sa'},[el('h3',{text:t('saTitle')}),el('ul',{class:'tl'},[el('li',{text:t('sa1')}),el('li',{text:t('sa2')})]),
+    el('p',{class:'src'},[t('source')+': ',el('a',{href:'https://www.nasa.gov/mission/sts-51G/',target:'_blank',rel:'noopener',text:'NASA — STS-51G'}),' · ',el('a',{href:'https://www.axiomspace.com/mission-blog/ax2-successful-launch',target:'_blank',rel:'noopener',text:'Axiom Space — Ax-2'})])]);
+  sec.replaceChildren(headB, el('div',{class:'acts'},[iss,apod,cams,sa]));
+  complete('iss');
+  paintISS(); paintApod();
+  if(entering){ live.fail=false; pollISS(); clearInterval(live.timer); live.timer=setInterval(()=>{ if(current==='live'&&!document.hidden) pollISS(); },5000); loadApod(); }
+}
+function stopLive(){ clearInterval(live.timer); live.timer=null; }
+async function pollISS(){
+  if(window.claude){ live.fail=true; paintISS(); return; }
+  try{ const r=await fetch('https://api.wheretheiss.at/v1/satellites/25544',{cache:'no-store'}); if(!r.ok) throw 0; const j=await r.json(); if(typeof j.latitude!=='number') throw 0;
+    live.last=j; live.fail=false; live.past.push([j.latitude,j.longitude]); if(live.past.length>2000) live.past.shift();
+    if(!live.pred||Date.now()-live.predAt>9*60000){ live.predAt=Date.now(); const ts=Array.from({length:10},(_,i)=>Math.round(j.timestamp+i*600)).join(',');
+      fetch('https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps='+ts+'&units=kilometers').then(r=>r.ok?r.json():null).then(a=>{ if(Array.isArray(a)) { live.pred=a.map(p=>[p.latitude,p.longitude]); paintISS(); } }).catch(()=>{}); }
+  }catch(e){ if(!live.last) live.fail=true; }
+  if(current==='live') paintISS();
+}
+function terminatorPoly(d){ // night side polygon (lat,lon) from the subsolar point
+  const s=Astro.body('sun',d,0,0); const gm=Astro.gmst(d); let sLon=((s.ra-gm+540)%360)-180; const dec=s.dec*Math.PI/180;
+  const pts=[]; for(let lon=-180;lon<=180;lon+=2){ const H=(lon-sLon)*Math.PI/180; const lat=Math.atan(-Math.cos(H)/Math.tan(dec||1e-6))*180/Math.PI; pts.push([lat,lon]); } return {pts,dark:dec>0?-90:90}; }
+function paintISS(){
+  const cv=live.cv; if(!cv||!cv.isConnected) return; const x=cv.getContext('2d'), w=cv.width, h=cv.height; drawWorld(x,w,h);
+  const X=lon=>(lon+180)/360*w, Y=lat=>(90-lat)/180*h;
+  const tp=terminatorPoly(new Date()); x.fillStyle='rgba(2,4,18,.58)'; x.beginPath(); x.moveTo(X(-180),Y(tp.dark)); tp.pts.forEach(([la,lo])=>x.lineTo(X(lo),Y(la))); x.lineTo(X(180),Y(tp.dark)); x.closePath(); x.fill();
+  const path=(pts,style,dash,wid)=>{ if(!pts||pts.length<2) return; x.strokeStyle=style; x.lineWidth=wid; x.setLineDash(dash||[]); x.beginPath(); pts.forEach(([la,lo],i)=>{ const px=X(lo),py=Y(la); if(i&&Math.abs(lo-pts[i-1][1])<180) x.lineTo(px,py); else x.moveTo(px,py); }); x.stroke(); x.setLineDash([]); };
+  path(live.pred,'rgba(255,255,255,.75)',[10,10],3); path(live.past,'#62d0ff',null,4);
+  const [hy,hx]=[Y(MADINAH[0]),X(MADINAH[1])]; x.fillStyle='#ffc65c'; x.beginPath(); x.arc(hx,hy,8,0,7); x.fill(); x.strokeStyle='#04050d'; x.lineWidth=3; x.stroke();
+  const st=$('#iss-stats'), msg=$('#iss-msg');
+  if(live.last){ const j=live.last, px=X(j.longitude), py=Y(j.latitude);
+    const g=x.createRadialGradient(px,py,0,px,py,40); g.addColorStop(0,'rgba(98,208,255,.7)'); g.addColorStop(1,'rgba(98,208,255,0)'); x.fillStyle=g; x.beginPath(); x.arc(px,py,40,0,7); x.fill();
+    x.save(); x.translate(px,py); x.fillStyle='#fff'; x.fillRect(-5,-5,10,10); x.fillStyle='#8fb4ff'; x.fillRect(-26,-3,16,6); x.fillRect(10,-3,16,6); x.fillStyle='#fff'; x.fillRect(-2,-14,4,28); x.restore();
+    if(st) st.replaceChildren(...[[t('lat'),fmtN(j.latitude,2)+'°'],[t('lon'),fmtN(j.longitude,2)+'°'],[t('altKm'),fmtN(j.altitude)+' '+(lang==='ar'?'كم':'km')],[t('speed'),fmtN(j.velocity)+' '+(lang==='ar'?'كم/س':'km/h')],
+      [t('fromCity'),fmtN(gcKm(MADINAH,[j.latitude,j.longitude]))+' '+(lang==='ar'?'كم':'km')],[lang==='ar'?'الإضاءة':'Lighting',j.visibility==='eclipsed'?t('shadow'):t('sunlit')]].map(([k,v])=>el('div',{class:'stat txt'},[el('b',{text:v}),el('small',{text:k})])));
+    if(msg) msg.replaceChildren(); }
+  else if(st){ st.replaceChildren(); if(msg) msg.replaceChildren(el('p',{class:'note',text:live.fail?t('issFail'):t('issLoading')})); }
+}
+async function loadApod(){
+  let c=null; try{ c=JSON.parse(localStorage.getItem('madari-apod')||'null'); }catch(e){}
+  if(c&&c.data&&Date.now()-c.at<6*3600000){ live.apod=c.data; paintApod(); return; }
+  if(window.claude){ live.apodFail=true; paintApod(); return; }
+  try{ const r=await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&thumbs=true'); if(!r.ok) throw 0; const j=await r.json(); if(!j||!j.title) throw 0; live.apod=j; live.apodFail=false;
+    try{ localStorage.setItem('madari-apod',JSON.stringify({at:Date.now(),data:j})); }catch(e){} }
+  catch(e){ if(c&&c.data) live.apod=c.data; else live.apodFail=true; }
+  paintApod();
+}
+function paintApod(){
+  const body=$('#apod-body'); if(!body) return; const a=live.apod;
+  if(!a){ body.replaceChildren(el('p',{class:'note',text:live.apodFail?t('apodFail'):'…'}), live.apodFail?extLink('https://apod.nasa.gov/apod/astropix.html','apod.nasa.gov'):null); return; }
+  const isImg=a.media_type==='image', img=isImg?a.url:(a.thumbnail_url||null);
+  const exp=el('details',{class:'apod-x'},[el('summary',{text:t('readMore')}),el('p',{lang:'en',dir:'ltr',text:a.explanation||''})]);
+  body.replaceChildren( img?el('a',{href:isImg?(a.hdurl||a.url):a.url,target:'_blank',rel:'noopener',class:'apod-img'},[el('img',{src:img,alt:a.title,loading:'lazy'})]):null,
+    el('h4',{lang:'en',dir:'ltr',text:a.title}), el('p',{class:'note',dir:'ltr',text:(a.date||'')+(a.copyright?' · © '+a.copyright.replace(/\s+/g,' ').trim():'')}),
+    lang==='ar'?el('p',{class:'note',text:t('apodEn')}):null, exp,
+    el('div',{class:'row links'},[extLink(isImg?(a.hdurl||a.url):a.url,isImg?t('apodOpen'):t('apodVideo')),extLink('https://apod.nasa.gov/apod/astropix.html','APOD')]) );
+}
+
+/* ================= PLANET SCALE ================= */
+const SCALE=[ ['mercury',.378,.241],['venus',.907,.615],['earth',1,1],['moon',.166,null],['mars',.377,1.88],['jupiter',2.36,11.9],['saturn',.916,29.4],['uranus',.889,83.7],['neptune',1.12,163.7] ];
+const scaleIn={m:'',a:''};
+function renderScale(){
+  const sec=$('#scr-scale');
+  const headB=el('div',{class:'ex-head'},[ el('button',{class:'ctl',type:'button','data-go':'hub'},[icon('back'),el('span',{text:t('back')})]), el('h2',{text:t('scaleTitle')}) ]); headB.firstChild.firstChild.classList.add('flip');
+  const m=el('input',{type:'number',inputmode:'decimal',min:'1',max:'300',step:'0.1',id:'sc-m',value:scaleIn.m}); const a=el('input',{type:'number',inputmode:'numeric',min:'1',max:'120',step:'1',id:'sc-a',value:scaleIn.a});
+  const err=el('p',{class:'err',hidden:''}); const out=el('div',{class:'scale-out'});
+  const run=()=>{ const mv=parseFloat(m.value), av=parseFloat(a.value); scaleIn.m=m.value; scaleIn.a=a.value;
+    if(!(mv>=1&&mv<=300)||!(av>=1&&av<=120)){ err.textContent=t('scaleErr'); err.hidden=false; out.replaceChildren(); return; } err.hidden=true; complete('scale');
+    out.replaceChildren(el('div',{class:'sc-head'},[el('span'),el('span',{text:t('scaleRead')}),el('span',{text:t('ageThere')})]),
+      ...SCALE.map(([id,g,p])=>{ const b=id==='moon'?{name:B('القمر','The Moon'),color:'#cfcac0'}:BODIES[id]; const max=2.36*mv; const w=Math.max(3,(g*mv)/max*100);
+        return el('div',{class:'sc-row'+(id==='earth'?' earth':'')},[ el('span',{class:'nm'},[el('i',{style:'--c:'+b.color}),L(b.name),el('small',{text:'×'+g})]),
+          el('span',{class:'val'},[el('b',{text:fmtN(g*mv,1)+' '+t('kg')}),el('span',{class:'bar'},[el('i',{style:`width:${w}%;background:${b.color}`})])]),
+          el('span',{class:'age'},[el('small',{class:'k',text:t('ageThere')+': '}),p?el('b',{text:fmtN(av/p,av/p>=10?1:2)+' '+t('yrs')}):el('small',{text:t('moonAge')})]) ]); }),
+      el('p',{class:'note',text:t('gasNote')}) ); };
+  const form=el('form',{class:'scale-form',novalidate:''},[ el('label',{},[el('span',{text:t('massIn')}),m]), el('label',{},[el('span',{text:t('ageIn')}),a]), el('button',{class:'btn',type:'submit',text:t('calc')}) ]);
+  form.addEventListener('submit',e=>{ e.preventDefault(); run(); });
+  const card=el('article',{class:'card wide'},[el('p',{class:'lead',text:t('scaleIntro')}),form,err,el('p',{class:'note',text:t('noSave')}),out,srcLine('https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html','NASA — Planetary Fact Sheet (ratio to Earth)')]);
+  sec.replaceChildren(headB,card);
+  if(scaleIn.m&&scaleIn.a) run();
+}
 
 /* boot */
 applyStatic(); applyCalm(); startQuotes(); loadVisitors();
